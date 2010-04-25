@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: interactivebroker:jtsclient:963">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/interactivebroker/jtsclient/963/jtsclient-963.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/interactivebroker/jtsclient/963/jtsclient-963-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/interactivebroker/jtsclient/963/jtsclient-963-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
