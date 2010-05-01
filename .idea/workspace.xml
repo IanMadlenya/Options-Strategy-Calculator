@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="11d6784a-2e76-4798-8685-d28ddb74be72" name="Default" comment="" />
-    <ignored path="$USER_HOME_GRAILS$/" />
+    <list default="true" readonly="true" id="11d6784a-2e76-4798-8685-d28ddb74be72" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/WrapperAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/HistoricalEODDataStrategy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/TradeHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/ConnectionImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/HistoricalEODData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/TradeException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/ConnectionFactory.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/Starillon.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/ConnectionFactoryImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/TradeToolsConnectionModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/TradeToolsModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/MarketDataService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/dto/MarketData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/Converter.java" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/Converter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/TradeToolsConverterModule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/starillon/ibtradetools/convertors/MetaStockCSVConverterFTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/starillon/ibtradetools/convertors/MetaStockCSVConverterFTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/MarketDataStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/IBTradeToolsModule.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/MetaStockCSVConverter.java" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/MetaStockCSVConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/Connection.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/MarketDataServiceImpl.java" />
+    </list>
     <ignored path="$USER_HOME_GRIFFON$/" />
+    <ignored path="$USER_HOME_GRAILS$/" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,19 +91,19 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="TradeHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/TradeHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="30" selection-start="1022" selection-end="1022" vertical-scroll-proportion="0.7125891">
+            <state line="12" column="42" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MetaStockCSVConverter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/MetaStockCSVConverter.java">
+      <file leaf-file-name="ConnectionImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/ConnectionImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="4" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
+            <state line="37" column="5" selection-start="981" selection-end="981" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,56 +111,82 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileNameTarget.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/FileNameTarget.java">
+      <file leaf-file-name="Connection.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/Connection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="5" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+            <state line="11" column="27" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MetaStockCSVConverterFTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/starillon/ibtradetools/convertors/MetaStockCSVConverterFTest.java">
+      <file leaf-file-name="MarketDataStrategy.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/MarketDataStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="1124" selection-end="1124" vertical-scroll-proportion="0.0">
+            <state line="10" column="0" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Converter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/Converter.java">
+      <file leaf-file-name="HistoricalEODData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/HistoricalEODData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="24" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
+            <state line="19" column="35" selection-start="464" selection-end="481" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1272709647000" expanded="true" signature="44:267" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WrapperAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/WrapperAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="146" column="112" selection-start="3021" selection-end="3021" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MarketDataService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/MarketDataService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="59" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Target.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/Target.java">
+      <file leaf-file-name="TradeToolsModule.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/TradeToolsModule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="17" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
+            <state line="18" column="0" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IBTradeToolsModule.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/IBTradeToolsModule.java">
+      <file leaf-file-name="MarketDataServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/MarketDataServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="4" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="25" column="32" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseConverter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/BaseConverter.java">
+      <file leaf-file-name="HistoricalEODDataStrategy.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/HistoricalEODDataStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="40" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="33" column="29" selection-start="915" selection-end="915" vertical-scroll-proportion="0.6769231">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,22 +204,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/coverters/IB2MetaStockCSV.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/coverters/Comverter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/coverters/Converter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/coverters/Convertor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/converters/Convertor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/converters/Converter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/Converter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/BaseConvertor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/BaseConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/Target.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/Converter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/FileNameTarget.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/MetaStockCSVConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/IBTradeToolsModule.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/starillon/ibtradetools/convertors/MetaStockCSVConverterFTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/Connection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/TradeException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/ConnectionFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/ConnectionFactoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/ConnectionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/TradeHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/WrapperAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/MarketDataService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/ConnectionImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/TradeOperationStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/HistoralDataStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/HistoricalDataStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/TradeToolsModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/MarketDataServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/MarketDataStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/HistoricalEODDataStrategy.java" />
       </list>
     </option>
   </component>
@@ -189,24 +241,6 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="IBTradeTools" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="IBTradeTools" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -237,7 +271,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -253,7 +287,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Favorites" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -343,7 +376,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="dto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBTradeTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBTradeTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="convertors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBTradeTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBTradeTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="connection" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -397,26 +482,23 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="project.propCompiler" />
+    <property name="options.lastSelected" value="fileTemplates" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -424,6 +506,9 @@
     </key>
     <key name="IntroduceConstantDialog.RECENTS_KEY">
       <recent name="com.starillon.ibtradetools.convertors.MetaStockCSVConverterFTest" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.starillon.ibtradetools.connection" />
     </key>
   </component>
   <component name="RunManager" selected="TestNG.MetaStockCSVConverterFTest">
@@ -460,17 +545,11 @@
       <properties />
       <listeners />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51764" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="61194" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -650,6 +729,9 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value="ALPHA_COMPARATOR" />
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -676,26 +758,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39908257" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17790414" sideWeight="0.77217126" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2112104" sideWeight="0.33639145" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.037367992" sideWeight="0.6605505" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2932575" sideWeight="0.77217126" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2112104" sideWeight="0.6529052" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21712539" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21712539" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -735,61 +817,127 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/FileNameTarget.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/TradeToolsConverterModule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="5" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+        <state line="8" column="38" selection-start="153" selection-end="178" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/starillon/ibtradetools/convertors/MetaStockCSVConverterFTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/TradeException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1124" selection-end="1124" vertical-scroll-proportion="0.0">
+        <state line="17" column="8" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/Converter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/ConnectionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="24" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
+        <state line="10" column="55" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/Target.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/ConnectionFactoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
+        <state line="13" column="41" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/BaseConverter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/TradeToolsConnectionModule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="40" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/convertors/MetaStockCSVConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="4" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
+        <state line="16" column="70" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/IBTradeToolsModule.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/dto/MarketData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="4" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
+        <state line="8" column="13" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/TradeHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="30" selection-start="1022" selection-end="1022" vertical-scroll-proportion="0.7125891">
+        <state line="12" column="42" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/WrapperAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="112" selection-start="3021" selection-end="3021" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="27" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/connection/ConnectionImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="5" selection-start="981" selection-end="981" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/MarketDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="59" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/HistoricalEODData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="35" selection-start="464" selection-end="481" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1272709647000" expanded="true" signature="44:267" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/TradeToolsModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/MarketDataServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="32" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/MarketDataStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/HistoricalEODDataStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="29" selection-start="915" selection-end="915" vertical-scroll-proportion="0.6769231">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -799,13 +947,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <UIState>
           <splitter-proportions>
-            <SplitterProportionsDataImpl>
-              <option name="proportions">
-                <list>
-                  <option value="0.2" />
-                </list>
-              </option>
-            </SplitterProportionsDataImpl>
+            <SplitterProportionsDataImpl />
           </splitter-proportions>
           <settings />
         </UIState>
@@ -813,15 +955,8 @@
       <state key="Copyright.UI">
         <UIState>
           <splitter-proportions>
-            <SplitterProportionsDataImpl>
-              <option name="proportions">
-                <list>
-                  <option value="0.2" />
-                </list>
-              </option>
-            </SplitterProportionsDataImpl>
+            <SplitterProportionsDataImpl />
           </splitter-proportions>
-          <last-edited>Starillon</last-edited>
         </UIState>
       </state>
       <state key="ProjectJDKs.UI">
@@ -841,20 +976,9 @@
       <state key="ScopeChooserConfigurable.UI">
         <UIState>
           <splitter-proportions>
-            <SplitterProportionsDataImpl>
-              <option name="proportions">
-                <list>
-                  <option value="0.2" />
-                </list>
-              </option>
-            </SplitterProportionsDataImpl>
+            <SplitterProportionsDataImpl />
           </splitter-proportions>
-          <last-edited>IBTradeTools</last-edited>
-          <settings>
-            <order>
-              <scope name="IBTradeTools" />
-            </order>
-          </settings>
+          <settings />
         </UIState>
       </state>
     </states>

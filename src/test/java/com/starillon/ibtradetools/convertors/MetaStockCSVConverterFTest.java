@@ -6,7 +6,6 @@ package com.starillon.ibtradetools.convertors;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.starillon.ibtradetools.IBTradeToolsModule;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -22,7 +21,7 @@ public class MetaStockCSVConverterFTest
     @BeforeTest
     public void setup()
     {
-        injector = Guice.createInjector(new IBTradeToolsModule());
+        injector = Guice.createInjector(new TradeToolsConverterModule());
     }
 
     @AfterTest

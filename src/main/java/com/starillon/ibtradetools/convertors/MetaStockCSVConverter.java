@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 
-public class MetaStockCSVConverter extends BaseConverter
+class MetaStockCSVConverter extends BaseConverter
 {
     private CSVWriter csvWriter;
 
@@ -30,6 +30,5 @@ public class MetaStockCSVConverter extends BaseConverter
     {
         csvWriter.flush();
         csvWriter.close();
-
     }
 }

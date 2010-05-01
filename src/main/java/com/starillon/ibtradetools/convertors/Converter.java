@@ -4,8 +4,6 @@
 
 package com.starillon.ibtradetools.convertors;
 
-import java.io.IOException;
-
 public interface Converter
 {
     void open(Target target) throws Exception;
