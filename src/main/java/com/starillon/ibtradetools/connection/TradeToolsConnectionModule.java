@@ -15,6 +15,6 @@ public class TradeToolsConnectionModule extends AbstractModule
     protected void configure()
     {
         bind(ConnectionFactory.class).to(ConnectionFactoryImpl.class);
-        bind(EWrapper.class).to(WrapperAdapter.class);
+        bind(ConnectionHandler.class).to(WrapperAdapter.class);
     }
 }

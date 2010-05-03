@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  * Date: Apr 25, 2010
  * Time: 2:26:09 PM
  */
-class WrapperAdapter implements EWrapper
+class WrapperAdapter implements ConnectionHandler
 {
     @Inject 
     private Logger logger;
@@ -213,7 +213,8 @@ class WrapperAdapter implements EWrapper
     {
     }
 
-    void setHandler(TradeHandler handler)
+    @Override
+    public void setHandler(TradeHandler handler)
     {
         this.handler = handler;
     }

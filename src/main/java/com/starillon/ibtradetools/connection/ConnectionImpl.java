@@ -14,15 +14,15 @@ import static com.google.common.base.Preconditions.checkNotNull;
  */
 public class ConnectionImpl implements Connection
 {
-    @Inject
-    private WrapperAdapter adapter;
+    private final ConnectionHandler handler;
     private final EClientSocket connection;
     private final int clientId = System.identityHashCode(this);
 
-    public ConnectionImpl(TradeHandler handler)
+    public ConnectionImpl(ConnectionHandler handler, TradeHandler tradeHandler)
     {
-        connection = new EClientSocket(adapter);
-        adapter.setHandler(handler);
+        this.handler = handler;
+        connection = new EClientSocket(this.handler);
+        this.handler.setHandler(tradeHandler);
     }
 
     @Override
