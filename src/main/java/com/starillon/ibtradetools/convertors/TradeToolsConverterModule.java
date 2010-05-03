@@ -4,9 +4,9 @@
 
 package com.starillon.ibtradetools.convertors;
 
-import com.google.inject.AbstractModule;
+import com.starillon.ibtradetools.BaseTradeToolsModule;
 
-public class TradeToolsConverterModule extends AbstractModule
+public class TradeToolsConverterModule extends BaseTradeToolsModule
 {
     @Override
     protected void configure()
