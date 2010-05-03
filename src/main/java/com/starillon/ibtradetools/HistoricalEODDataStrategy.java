@@ -27,8 +27,7 @@ public class HistoricalEODDataStrategy implements TradeHandler, MarketDataStrate
     public HistoricalEODDataStrategy()
     {
         connection = connectionFactory.getConnection(this);
-        // TODO Fix this
-        connection.connect("", 7496);
+        connection.connect();
     }
 
     @Override

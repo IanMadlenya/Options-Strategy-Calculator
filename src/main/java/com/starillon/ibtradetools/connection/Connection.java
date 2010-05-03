@@ -8,8 +8,10 @@ package com.starillon.ibtradetools.connection;
  */
 public interface Connection
 {
-    void connect(String host, int port);
+    void connect();
 
+    void connect(String host, int port);
+    
     boolean isConnected();
 
     void disconnect();

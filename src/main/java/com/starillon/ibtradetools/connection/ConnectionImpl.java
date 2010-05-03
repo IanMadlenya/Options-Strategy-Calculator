@@ -16,24 +16,30 @@ public class ConnectionImpl implements Connection
 {
     private final ConnectionHandler handler;
     private final EClientSocket connection;
+    private final String host;
+    private final int port;
     private final int clientId = System.identityHashCode(this);
 
-    public ConnectionImpl(ConnectionHandler handler, TradeHandler tradeHandler)
+    public ConnectionImpl(ConnectionHandler handler, TradeHandler tradeHandler, String host, int port)
     {
+        this.host = host;
+        this.port = port;
         this.handler = handler;
         connection = new EClientSocket(this.handler);
         this.handler.setHandler(tradeHandler);
     }
 
     @Override
+    public void connect()
+    {
+        checkAlreadyConnected();
+        connection.eConnect(host, port, clientId);
+    }
+
+    @Override
     public void connect(String host, int port)
     {
-        checkNotNull(host, "host cannot be null");
-        if (connection.isConnected())
-        {
-            throw new TradeException("Already connected");
-        }
-
+        checkAlreadyConnected();
         connection.eConnect(host, port, clientId);
     }
 
@@ -43,13 +49,21 @@ public class ConnectionImpl implements Connection
         return connection.isConnected();
     }
 
-
     @Override
     public void disconnect()
     {
         if (connection.isConnected())
         {
             connection.eDisconnect();
+        }
+    }
+
+
+    private void checkAlreadyConnected()
+    {
+        if (connection.isConnected())
+        {
+            throw new TradeException("Already connected");
         }
     }
 }
