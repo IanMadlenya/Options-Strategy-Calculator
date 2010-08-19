@@ -1,6 +1,9 @@
 package com.starillon.ibtradetools;
 
+import com.ib.client.Contract;
+
 import java.util.Date;
+import java.util.List;
 
 /**
  * Copyright 2010 Starillon Pty Ltd
@@ -8,8 +11,7 @@ import java.util.Date;
  * Date: May 1, 2010
  * Time: 6:10:32 PM
  */
-public interface MarketDataStrategy
-{
+public interface MarketDataStrategy {
 
-    void execute(Date date, String... symbols);
+    void execute(Date date, List<Contract> symbols);
 }

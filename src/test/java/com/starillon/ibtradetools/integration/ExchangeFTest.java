@@ -15,22 +15,19 @@ import java.util.List;
  * Time: 7:39:20 PM
  */
 @Test(groups = "functional")
-public class ExchangeFTest
-{
+public class ExchangeFTest {
     private Injector injector;
 
     @Test
-    public void exchange_listSymbols_success()
-    {
+    public void exchange_listSymbols_success() {
         Exchange exchange = injector.getInstance(Exchange.class);
         List<Contract> symbols = exchange.listAllSymbols();
-        assert (symbols.size() == 2190) : "Unexpected size : " + symbols.size();
+        assert (symbols.size() == 2227) : "Unexpected size : " + symbols.size();
         assert (symbols.get(0).m_symbol.equalsIgnoreCase("ont"));
     }
 
     @BeforeClass
-    protected void setUp()
-    {
+    protected void setUp() {
         injector = Guice.createInjector(new TradeToolsIntegrationModule());
     }
 }

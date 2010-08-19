@@ -1,12 +1,10 @@
 package com.starillon.ibtradetools;
 
-import com.google.common.collect.Lists;
 import com.google.inject.Inject;
 import com.ib.client.Contract;
 import com.starillon.ibtradetools.connection.Connection;
 import com.starillon.ibtradetools.connection.ConnectionFactory;
 import com.starillon.ibtradetools.connection.TradeHandler;
-import com.starillon.ibtradetools.contract.ASXStock;
 import com.starillon.ibtradetools.dto.MarketData;
 
 import java.util.Date;
@@ -18,47 +16,32 @@ import java.util.List;
  * Date: May 1, 2010
  * Time: 6:28:04 PM
  */
-public class HistoricalEODDataStrategy implements TradeHandler, MarketDataStrategy
-{
+public class HistoricalEODDataStrategy implements TradeHandler, MarketDataStrategy {
     @Inject
     private ConnectionFactory connectionFactory;
     private Connection connection;
 
-    public HistoricalEODDataStrategy()
-    {
+    public HistoricalEODDataStrategy() {
         connection = connectionFactory.getConnection(this);
         connection.connect();
     }
 
+
     @Override
-    public void execute(Date date, String... symbols)
-    {
-        Contract[] contracts = createContracts(symbols);
+    public void execute(Date date, List<Contract> symbols) {
+        assert (connection.isConnected()) : "Connection not established";
 
-
-    }
-
-    private Contract[] createContracts(String... symbols)
-    {
-        List<Contract> contracts = Lists.newArrayList();
-
-        for (String symbol : symbols)
-        {
-            contracts.add(new ASXStock(symbol));
-        }
-
-        return contracts.toArray(new Contract[contracts.size()]);
+        // TODO fill in api calls
+        //connection.getSocket().reqHistoricalData();
     }
 
     @Override
-    public void handleHistoricalData(MarketData marketData)
-    {
+    public void handleHistoricalData(MarketData marketData) {
 
     }
 
     @Override
-    public void handleError(int id, int errorCode, String errorMessage)
-    {
+    public void handleError(int id, int errorCode, String errorMessage) {
 
     }
 }
