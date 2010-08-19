@@ -1,14 +1,19 @@
 package com.starillon.ibtradetools;
 
+import com.google.common.collect.Maps;
 import com.google.inject.Inject;
-import com.ib.client.Contract;
 import com.starillon.ibtradetools.connection.Connection;
 import com.starillon.ibtradetools.connection.ConnectionFactory;
 import com.starillon.ibtradetools.connection.TradeHandler;
+import com.starillon.ibtradetools.contract.ContractDataCriteria;
 import com.starillon.ibtradetools.dto.MarketData;
+import com.starillon.ibtradetools.util.DateConverter;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
+
+import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
  * Copyright 2010 Starillon Pty Ltd
@@ -19,20 +24,33 @@ import java.util.List;
 public class HistoricalEODDataStrategy implements TradeHandler, MarketDataStrategy {
     @Inject
     private ConnectionFactory connectionFactory;
+    @Inject
+    private RequestIdGenerator requestIdGenerator;
     private Connection connection;
+    final private Map<ContractDataCriteria, Integer> criteriaRequests;
 
     public HistoricalEODDataStrategy() {
         connection = connectionFactory.getConnection(this);
         connection.connect();
+        criteriaRequests = Maps.newHashMap();
+
     }
 
 
     @Override
-    public void execute(Date date, List<Contract> symbols) {
+    public void execute(Date date, List<ContractDataCriteria> criteria) {
         assert (connection.isConnected()) : "Connection not established";
+        checkNotNull(date, "date is null");
 
-        // TODO fill in api calls
-        //connection.getSocket().reqHistoricalData();
+        for (ContractDataCriteria contractDataCriteria : criteria) {
+            Integer requestId = requestIdGenerator.nextValue();
+            criteriaRequests.put(contractDataCriteria, requestId);
+
+            connection.getSocket().reqHistoricalData(requestId, contractDataCriteria.getContract(),
+                    DateConverter.convert(date), contractDataCriteria.getDuration(), contractDataCriteria.getBarSize(),
+                    contractDataCriteria.getMarketDataType(), contractDataCriteria.getRegularTradingHours(),
+                    contractDataCriteria.getDateFormat());
+        }
     }
 
     @Override
