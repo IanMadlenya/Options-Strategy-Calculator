@@ -1,6 +1,6 @@
 package com.starillon.ibtradetools;
 
-import com.ib.client.Contract;
+import com.starillon.ibtradetools.contract.ContractDataCriteria;
 
 import java.util.Date;
 import java.util.List;
@@ -13,5 +13,5 @@ import java.util.List;
  */
 public interface MarketDataStrategy {
 
-    void execute(Date date, List<Contract> symbols);
+    void execute(Date date, List<ContractDataCriteria> criteria);
 }

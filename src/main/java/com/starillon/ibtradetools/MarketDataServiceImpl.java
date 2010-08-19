@@ -1,7 +1,7 @@
 package com.starillon.ibtradetools;
 
 import com.google.inject.Inject;
-import com.ib.client.Contract;
+import com.starillon.ibtradetools.contract.ContractDataCriteria;
 
 import java.util.Date;
 import java.util.List;
@@ -18,7 +18,7 @@ class MarketDataServiceImpl implements MarketDataService {
     private MarketDataStrategy stockEODStrategy;
 
     @Override
-    public void requestStockEODData(Date date, List<Contract> contracts) {
+    public void requestStockEODData(Date date, List<ContractDataCriteria> contracts) {
         stockEODStrategy.execute(date, contracts);
     }
 }

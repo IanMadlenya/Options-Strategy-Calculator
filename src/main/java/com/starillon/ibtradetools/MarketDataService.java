@@ -1,6 +1,6 @@
 package com.starillon.ibtradetools;
 
-import com.ib.client.Contract;
+import com.starillon.ibtradetools.contract.ContractDataCriteria;
 
 import java.util.Date;
 import java.util.List;
@@ -12,5 +12,5 @@ import java.util.List;
  * Time: 5:48:56 PM
  */
 public interface MarketDataService {
-    void requestStockEODData(Date date, List<Contract> contracts);
+    void requestStockEODData(Date date, List<ContractDataCriteria> contracts);
 }
