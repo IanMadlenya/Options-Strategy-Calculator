@@ -6,8 +6,7 @@ package com.starillon.ibtradetools.dto;
  * Date: Apr 25, 2010
  * Time: 3:51:42 PM
  */
-public class MarketData
-{
+public class MarketData {
     private String date;
     private double open;
     private double high;
@@ -18,9 +17,8 @@ public class MarketData
     double wap;
     private boolean hasGaps;
 
-    public MarketData(String date, double open, double high, double low, double close, int volume, int count, 
-                      double wap, boolean hasGaps)
-    {
+    public MarketData(String date, double open, double high, double low, double close, int volume, int count,
+                      double wap, boolean hasGaps) {
         this.date = date;
         this.open = open;
         this.high = high;
@@ -32,48 +30,54 @@ public class MarketData
         this.hasGaps = hasGaps;
     }
 
-    public String getDate()
-    {
+    public String getDate() {
         return date;
     }
 
-    public double getOpen()
-    {
+    public double getOpen() {
         return open;
     }
 
-    public double getHigh()
-    {
+    public double getHigh() {
         return high;
     }
 
-    public double getLow()
-    {
+    public double getLow() {
         return low;
     }
 
-    public double getClose()
-    {
+    public double getClose() {
         return close;
     }
 
-    public int getVolume()
-    {
+    public int getVolume() {
         return volume;
     }
 
-    public int getCount()
-    {
+    public int getCount() {
         return count;
     }
 
-    public double getWap()
-    {
+    public double getWap() {
         return wap;
     }
 
-    public boolean isHasGaps()
-    {
+    public boolean isHasGaps() {
         return hasGaps;
+    }
+
+    @Override
+    public String toString() {
+        return "MarketData{" +
+                "date='" + date + '\'' +
+                ", open=" + open +
+                ", high=" + high +
+                ", low=" + low +
+                ", close=" + close +
+                ", volume=" + volume +
+                ", count=" + count +
+                ", wap=" + wap +
+                ", hasGaps=" + hasGaps +
+                '}';
     }
 }

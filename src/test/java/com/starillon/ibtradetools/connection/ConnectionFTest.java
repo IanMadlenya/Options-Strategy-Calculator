@@ -7,31 +7,26 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**
-
  * User: mark
  * Date: May 3, 2010
  * Time: 4:21:50 PM
  */
 @Test(groups = "functional")
-public class ConnectionFTest
-{
+public class ConnectionFTest {
     private ConnectionFactory connectionFactory;
 
 
     @Test
-    public void connection_local_success()
-    {
-        Connection connection = connectionFactory.getConnection(new TradeHandler()
-        {
+    public void connection_local_success() {
+        Connection connection = connectionFactory.getConnection(new TradeHandler() {
+
             @Override
-            public void handleHistoricalData(MarketData marketData)
-            {
+            public void handleHistoricalData(int id, MarketData marketData) {
                 assert (false);
             }
 
             @Override
-            public void handleError(int id, int errorCode, String errorMessage)
-            {
+            public void handleError(int id, int errorCode, String errorMessage) {
                 assert (false) : "Unexpected connection error : " + errorCode + " , " + errorMessage;
             }
         });
@@ -45,19 +40,15 @@ public class ConnectionFTest
 
 
     @Test
-    public void connection_local_failure()
-    {
-        Connection connection = connectionFactory.getConnection(new TradeHandler()
-        {
+    public void connection_local_failure() {
+        Connection connection = connectionFactory.getConnection(new TradeHandler() {
             @Override
-            public void handleHistoricalData(MarketData marketData)
-            {
+            public void handleHistoricalData(int id, MarketData marketData) {
 
             }
 
             @Override
-            public void handleError(int id, int errorCode, String errorMessage)
-            {
+            public void handleError(int id, int errorCode, String errorMessage) {
                 assert (errorCode == 502) : "Incorrect error code : " + errorCode + " , " + errorMessage;
             }
         });
@@ -68,15 +59,13 @@ public class ConnectionFTest
     }
 
     @Test(expectedExceptions = NullPointerException.class)
-    public void connection_local_noHandler()
-    {
+    public void connection_local_noHandler() {
         connectionFactory.getConnection(null);
     }
 
 
     @BeforeMethod
-    protected void setUp() throws Exception
-    {
+    protected void setUp() throws Exception {
         Injector injector = Guice.createInjector(new TradeToolsConnectionModule());
         connectionFactory = injector.getInstance(ConnectionFactory.class);
     }

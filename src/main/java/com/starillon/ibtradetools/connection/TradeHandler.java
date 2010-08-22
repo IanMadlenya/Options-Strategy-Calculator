@@ -8,8 +8,8 @@ import com.starillon.ibtradetools.dto.MarketData;
  * Date: May 1, 2010
  * Time: 4:39:53 PM
  */
-public interface TradeHandler
-{
-    void handleHistoricalData(MarketData marketData);
+public interface TradeHandler {
+    void handleHistoricalData(int id, MarketData marketData);
+
     void handleError(int id, int errorCode, String errorMessage);
 }

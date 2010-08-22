@@ -6,11 +6,11 @@ package com.starillon.ibtradetools;
  * Date: May 1, 2010
  * Time: 5:49:23 PM
  */
-public class TradeToolsModule extends BaseTradeToolsModule
-{
+public class TradeToolsModule extends BaseTradeToolsModule {
     @Override
-    protected void configure()
-    {
+    protected void configure() {
+        bind(MarketDataService.class).to(MarketDataServiceImpl.class);
         bind(MarketDataStrategy.class).annotatedWith(HistoricalEODData.class).to(HistoricalEODDataStrategy.class);
+        bind(RequestIdGenerator.class).to(RequestIdGeneratorImpl.class);
     }
 }

@@ -12,5 +12,5 @@ import java.util.List;
  * Time: 5:48:56 PM
  */
 public interface MarketDataService {
-    void requestStockEODData(Date date, List<ContractDataCriteria> contracts);
+    void requestStockEODData(Date date, List<ContractDataCriteria> contracts, MarketDataListener marketDataListener);
 }

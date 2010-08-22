@@ -9,6 +9,8 @@ public class ContractDataCriteria {
     private Duration duration;
     private MarketDataType marketDataType;
     private RegularTradingHours regularTradingHours;
+    private int durationAmount;
+    private static final String SPACE = " ";
 
     public Contract getContract() {
         return contract;
@@ -35,7 +37,7 @@ public class ContractDataCriteria {
     }
 
     public String getDuration() {
-        return (duration != null) ? duration.toString() : null;
+        return (duration != null) ? durationAmount + SPACE + duration.toString() : null;
     }
 
     public void setDuration(Duration duration) {
@@ -56,5 +58,9 @@ public class ContractDataCriteria {
 
     public void setRegularTradingHours(RegularTradingHours regularTradingHours) {
         this.regularTradingHours = regularTradingHours;
+    }
+
+    public void setDurationAmount(int durationAmount) {
+        this.durationAmount = durationAmount;
     }
 }

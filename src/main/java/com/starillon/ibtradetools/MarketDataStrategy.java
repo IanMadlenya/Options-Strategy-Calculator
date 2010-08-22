@@ -13,5 +13,5 @@ import java.util.List;
  */
 public interface MarketDataStrategy {
 
-    void execute(Date date, List<ContractDataCriteria> criteria);
+    void execute(Date date, List<ContractDataCriteria> criteria, MarketDataListener marketDataListener);
 }

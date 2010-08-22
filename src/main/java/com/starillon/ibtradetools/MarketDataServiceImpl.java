@@ -17,8 +17,9 @@ class MarketDataServiceImpl implements MarketDataService {
     @HistoricalEODData
     private MarketDataStrategy stockEODStrategy;
 
+
     @Override
-    public void requestStockEODData(Date date, List<ContractDataCriteria> contracts) {
-        stockEODStrategy.execute(date, contracts);
+    public void requestStockEODData(Date date, List<ContractDataCriteria> contracts, MarketDataListener marketDataListener) {
+        stockEODStrategy.execute(date, contracts, marketDataListener);
     }
 }
