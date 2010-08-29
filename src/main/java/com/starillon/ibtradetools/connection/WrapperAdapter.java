@@ -2,7 +2,7 @@ package com.starillon.ibtradetools.connection;
 
 import com.google.inject.Inject;
 import com.ib.client.*;
-import com.starillon.ibtradetools.dto.MarketData;
+import com.starillon.ibtradetools.data.MarketData;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

@@ -1,4 +1,4 @@
-package com.starillon.ibtradetools.dto;
+package com.starillon.ibtradetools.data;
 
 /**
  * Copyright 2010 Starillon Pty Ltd

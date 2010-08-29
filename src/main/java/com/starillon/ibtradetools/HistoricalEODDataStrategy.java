@@ -6,7 +6,7 @@ import com.starillon.ibtradetools.connection.Connection;
 import com.starillon.ibtradetools.connection.ConnectionFactory;
 import com.starillon.ibtradetools.connection.TradeHandler;
 import com.starillon.ibtradetools.contract.ContractDataCriteria;
-import com.starillon.ibtradetools.dto.MarketData;
+import com.starillon.ibtradetools.data.MarketData;
 import com.starillon.ibtradetools.util.DateConverter;
 
 import java.util.Date;

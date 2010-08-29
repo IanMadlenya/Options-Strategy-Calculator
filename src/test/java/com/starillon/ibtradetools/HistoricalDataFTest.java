@@ -4,7 +4,7 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.starillon.ibtradetools.connection.TradeToolsConnectionModule;
 import com.starillon.ibtradetools.contract.*;
-import com.starillon.ibtradetools.dto.MarketData;
+import com.starillon.ibtradetools.data.MarketData;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

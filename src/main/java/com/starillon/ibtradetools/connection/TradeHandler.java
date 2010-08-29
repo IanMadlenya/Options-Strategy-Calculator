@@ -1,6 +1,6 @@
 package com.starillon.ibtradetools.connection;
 
-import com.starillon.ibtradetools.dto.MarketData;
+import com.starillon.ibtradetools.data.MarketData;
 
 /**
  * Copyright 2010 Starillon Pty Ltd
