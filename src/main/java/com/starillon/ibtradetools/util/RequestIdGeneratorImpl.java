@@ -1,4 +1,4 @@
-package com.starillon.ibtradetools;
+package com.starillon.ibtradetools.util;
 
 import com.google.inject.Singleton;
 

@@ -1,7 +1,13 @@
 package com.starillon.ibtradetools;
 
 import com.google.inject.Inject;
+import com.ib.client.Contract;
 import com.starillon.ibtradetools.contract.ContractDataCriteria;
+import com.starillon.ibtradetools.listeners.MarketDataListener;
+import com.starillon.ibtradetools.listeners.MarketDepthListener;
+import com.starillon.ibtradetools.strategy.HistoricalEODData;
+import com.starillon.ibtradetools.strategy.MarketDataStrategy;
+import com.starillon.ibtradetools.strategy.MarketDepthStrategy;
 
 import java.util.Date;
 
@@ -15,7 +21,8 @@ class MarketDataServiceImpl implements MarketDataService {
     @Inject
     @HistoricalEODData
     private MarketDataStrategy stockEODStrategy;
-
+    @Inject
+    private MarketDepthStrategy marketDepthStrategy;
 
     @Override
     public void requestStockEODData(Date date, ContractDataCriteria criteria, MarketDataListener marketDataListener) {
@@ -25,5 +32,15 @@ class MarketDataServiceImpl implements MarketDataService {
     @Override
     public void unsubscribe(MarketDataListener marketDataListener) {
         stockEODStrategy.cancel(marketDataListener);
+    }
+
+    @Override
+    public void requestMarketDepth(Contract contract, int depth, MarketDepthListener marketDepthListener) {
+        marketDepthStrategy.execute(contract, depth, marketDepthListener);
+    }
+
+    @Override
+    public void unsubscribe(MarketDepthListener marketDepthListener) {
+        marketDepthStrategy.cancel(marketDepthListener);
     }
 }

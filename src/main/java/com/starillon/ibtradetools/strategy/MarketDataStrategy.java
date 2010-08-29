@@ -1,6 +1,7 @@
-package com.starillon.ibtradetools;
+package com.starillon.ibtradetools.strategy;
 
 import com.starillon.ibtradetools.contract.ContractDataCriteria;
+import com.starillon.ibtradetools.listeners.MarketDataListener;
 
 import java.util.Date;
 

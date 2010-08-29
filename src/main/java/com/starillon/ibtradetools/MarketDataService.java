@@ -1,6 +1,9 @@
 package com.starillon.ibtradetools;
 
+import com.ib.client.Contract;
 import com.starillon.ibtradetools.contract.ContractDataCriteria;
+import com.starillon.ibtradetools.listeners.MarketDataListener;
+import com.starillon.ibtradetools.listeners.MarketDepthListener;
 
 import java.util.Date;
 
@@ -14,4 +17,8 @@ public interface MarketDataService {
     void requestStockEODData(Date date, ContractDataCriteria criteria, MarketDataListener marketDataListener);
 
     void unsubscribe(MarketDataListener marketDataListener);
+
+    void requestMarketDepth(Contract contract, int depth, MarketDepthListener marketDepthListener);
+
+    void unsubscribe(MarketDepthListener marketDepthListener);
 }

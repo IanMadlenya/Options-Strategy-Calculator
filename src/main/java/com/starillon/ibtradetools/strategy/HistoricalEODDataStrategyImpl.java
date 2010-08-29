@@ -1,4 +1,4 @@
-package com.starillon.ibtradetools;
+package com.starillon.ibtradetools.strategy;
 
 import com.google.common.collect.Maps;
 import com.google.inject.Inject;
@@ -7,7 +7,10 @@ import com.starillon.ibtradetools.connection.ConnectionFactory;
 import com.starillon.ibtradetools.connection.TradeHandler;
 import com.starillon.ibtradetools.contract.ContractDataCriteria;
 import com.starillon.ibtradetools.data.MarketData;
+import com.starillon.ibtradetools.listeners.MarketDataListener;
+import com.starillon.ibtradetools.listeners.UnmatchedMarketData;
 import com.starillon.ibtradetools.util.DateConverter;
+import com.starillon.ibtradetools.util.RequestIdGenerator;
 
 import java.util.Date;
 import java.util.Map;
@@ -21,7 +24,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * Date: May 1, 2010
  * Time: 6:28:04 PM
  */
-public class HistoricalEODDataStrategy implements TradeHandler, MarketDataStrategy {
+public class HistoricalEODDataStrategyImpl implements TradeHandler, MarketDataStrategy {
     private ConnectionFactory connectionFactory;
     private RequestIdGenerator requestIdGenerator;
     @Inject
@@ -34,7 +37,7 @@ public class HistoricalEODDataStrategy implements TradeHandler, MarketDataStrate
     private static final int HIST_DATA_SERV_CONNECTED = 2106;
 
     @Inject
-    public HistoricalEODDataStrategy(RequestIdGenerator requestIdGenerator, ConnectionFactory connectionFactory) {
+    public HistoricalEODDataStrategyImpl(RequestIdGenerator requestIdGenerator, ConnectionFactory connectionFactory) {
         this.requestIdGenerator = requestIdGenerator;
         this.connectionFactory = connectionFactory;
         connection = connectionFactory.getConnection(this);
