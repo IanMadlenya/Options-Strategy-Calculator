@@ -8,7 +8,6 @@ import com.starillon.ibtradetools.dto.MarketData;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.Arrays;
 import java.util.Date;
 import java.util.concurrent.CountDownLatch;
 
@@ -35,10 +34,12 @@ public class HistoricalDataFTest {
             }
         };
 
-        marketDataService.requestStockEODData(new Date(), Arrays.asList(criteria), listener);
+        marketDataService.requestStockEODData(new Date(), criteria, listener);
         latch.await();
         assert (!listener.isMarketDataError());
+        marketDataService.unsubscribe(listener);
     }
+
 
     @BeforeMethod
     protected void setUp() throws Exception {

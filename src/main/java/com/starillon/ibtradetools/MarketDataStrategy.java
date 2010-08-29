@@ -3,7 +3,6 @@ package com.starillon.ibtradetools;
 import com.starillon.ibtradetools.contract.ContractDataCriteria;
 
 import java.util.Date;
-import java.util.List;
 
 /**
  * Copyright 2010 Starillon Pty Ltd
@@ -13,5 +12,7 @@ import java.util.List;
  */
 public interface MarketDataStrategy {
 
-    void execute(Date date, List<ContractDataCriteria> criteria, MarketDataListener marketDataListener);
+    void execute(Date date, ContractDataCriteria criteria, MarketDataListener marketDataListener);
+
+    void cancel(MarketDataListener marketDataListener);
 }

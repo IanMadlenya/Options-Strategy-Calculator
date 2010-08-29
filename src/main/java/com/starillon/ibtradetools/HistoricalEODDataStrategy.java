@@ -10,7 +10,6 @@ import com.starillon.ibtradetools.dto.MarketData;
 import com.starillon.ibtradetools.util.DateConverter;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -27,6 +26,9 @@ public class HistoricalEODDataStrategy implements TradeHandler, MarketDataStrate
     private RequestIdGenerator requestIdGenerator;
     @Inject
     private Logger logger;
+    @Inject
+    @UnmatchedMarketData
+    private MarketDataListener unmatchedRequestListener;
     private Connection connection;
     final private Map<Integer, MarketDataListener> criteriaRequests;
     private static final int HIST_DATA_SERV_CONNECTED = 2106;
@@ -43,20 +45,31 @@ public class HistoricalEODDataStrategy implements TradeHandler, MarketDataStrate
 
 
     @Override
-    public void execute(Date date, List<ContractDataCriteria> criteria, MarketDataListener marketDataListener) {
+    public void execute(Date date, ContractDataCriteria criteria, MarketDataListener marketDataListener) {
         assert (connection.isConnected()) : "Connection not established";
         checkNotNull(date, "date is null");
         checkNotNull(criteria, "criteria is null");
         checkNotNull(marketDataListener, "marketDataListener is null");
 
-        for (ContractDataCriteria contractDataCriteria : criteria) {
-            Integer requestId = requestIdGenerator.nextValue();
-            criteriaRequests.put(requestId, marketDataListener);
+        Integer requestId = requestIdGenerator.nextValue();
+        criteriaRequests.put(requestId, marketDataListener);
 
-            connection.getSocket().reqHistoricalData(requestId, contractDataCriteria.getContract(),
-                    DateConverter.convert(date), contractDataCriteria.getDuration(), contractDataCriteria.getBarSize(),
-                    contractDataCriteria.getMarketDataType(), contractDataCriteria.getRegularTradingHours(),
-                    contractDataCriteria.getDateFormat());
+        connection.getSocket().reqHistoricalData(requestId, criteria.getContract(),
+                DateConverter.convert(date), criteria.getDuration(), criteria.getBarSize(),
+                criteria.getMarketDataType(), criteria.getRegularTradingHours(),
+                criteria.getDateFormat());
+
+    }
+
+    @Override
+    public void cancel(MarketDataListener marketDataListener) {
+        checkNotNull(marketDataListener, "marketDataListener is null");
+
+        for (Integer requestId : criteriaRequests.keySet()) {
+            if (criteriaRequests.get(requestId).equals(marketDataListener)) {
+                connection.getSocket().cancelHistoricalData(requestId);
+                criteriaRequests.remove(requestId);
+            }
         }
     }
 
@@ -82,7 +95,8 @@ public class HistoricalEODDataStrategy implements TradeHandler, MarketDataStrate
         MarketDataListener listener = criteriaRequests.get(id);
 
         if (listener == null && id != -1) {
-            throw new TradeException("Listener for request id : " + id + " not found");
+            logger.warning("Unmatched marker data listener for request id " + id);
+            listener = unmatchedRequestListener;
         } else {
             logger.info("Ignore request for listener with id : " + id);
         }

@@ -4,7 +4,6 @@ import com.google.inject.Inject;
 import com.starillon.ibtradetools.contract.ContractDataCriteria;
 
 import java.util.Date;
-import java.util.List;
 
 /**
  * Copyright 2010 Starillon Pty Ltd
@@ -19,7 +18,12 @@ class MarketDataServiceImpl implements MarketDataService {
 
 
     @Override
-    public void requestStockEODData(Date date, List<ContractDataCriteria> contracts, MarketDataListener marketDataListener) {
-        stockEODStrategy.execute(date, contracts, marketDataListener);
+    public void requestStockEODData(Date date, ContractDataCriteria criteria, MarketDataListener marketDataListener) {
+        stockEODStrategy.execute(date, criteria, marketDataListener);
+    }
+
+    @Override
+    public void unsubscribe(MarketDataListener marketDataListener) {
+        stockEODStrategy.cancel(marketDataListener);
     }
 }

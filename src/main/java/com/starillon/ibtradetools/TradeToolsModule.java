@@ -11,6 +11,7 @@ public class TradeToolsModule extends BaseTradeToolsModule {
     protected void configure() {
         bind(MarketDataService.class).to(MarketDataServiceImpl.class);
         bind(MarketDataStrategy.class).annotatedWith(HistoricalEODData.class).to(HistoricalEODDataStrategy.class);
+        bind(MarketDataListener.class).annotatedWith(UnmatchedMarketData.class).to(UnmatchedRequestMarketDataListener.class);
         bind(RequestIdGenerator.class).to(RequestIdGeneratorImpl.class);
     }
 }
