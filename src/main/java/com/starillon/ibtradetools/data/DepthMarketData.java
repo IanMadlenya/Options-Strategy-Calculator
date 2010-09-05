@@ -8,18 +8,20 @@ package com.starillon.ibtradetools.data;
  * Time: 5:25:58 PM
  */
 public class DepthMarketData {
-    Side side;
-    Operation operation;
-    int position;
-    double price;
-    int size;
+    private Side side;
+    private Operation operation;
+    private int position;
+    private double price;
+    private int size;
+    private String marketMaker;
 
-    public DepthMarketData(Side side, Operation operation, int position, double price, int size) {
+    public DepthMarketData(Side side, Operation operation, int position, double price, int size, String marketMaker) {
         this.side = side;
         this.operation = operation;
         this.position = position;
         this.price = price;
         this.size = size;
+        this.marketMaker = marketMaker;
     }
 
     public Side getSide() {
@@ -40,5 +42,9 @@ public class DepthMarketData {
 
     public int getSize() {
         return size;
+    }
+
+    public String getMarketMaker() {
+        return marketMaker;
     }
 }

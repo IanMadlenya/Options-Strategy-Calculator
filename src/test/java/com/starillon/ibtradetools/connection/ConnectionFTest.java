@@ -18,7 +18,7 @@ public class ConnectionFTest {
 
     @Test
     public void connection_local_success() {
-        Connection connection = connectionFactory.getConnection(new TradeHandler() {
+        Connection connection = connectionFactory.getConnection(new TradeHandlerAdapter() {
 
             @Override
             public void handleHistoricalData(int id, MarketData marketData) {
@@ -41,7 +41,7 @@ public class ConnectionFTest {
 
     @Test
     public void connection_local_failure() {
-        Connection connection = connectionFactory.getConnection(new TradeHandler() {
+        Connection connection = connectionFactory.getConnection(new TradeHandlerAdapter() {
             @Override
             public void handleHistoricalData(int id, MarketData marketData) {
 

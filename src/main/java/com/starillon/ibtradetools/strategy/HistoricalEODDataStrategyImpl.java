@@ -2,9 +2,9 @@ package com.starillon.ibtradetools.strategy;
 
 import com.google.common.collect.Maps;
 import com.google.inject.Inject;
-import com.starillon.ibtradetools.connection.Connection;
 import com.starillon.ibtradetools.connection.ConnectionFactory;
 import com.starillon.ibtradetools.connection.TradeHandler;
+import com.starillon.ibtradetools.connection.TradeHandlerAdapter;
 import com.starillon.ibtradetools.contract.ContractDataCriteria;
 import com.starillon.ibtradetools.data.MarketData;
 import com.starillon.ibtradetools.listeners.MarketDataListener;
@@ -14,7 +14,6 @@ import com.starillon.ibtradetools.util.RequestIdGenerator;
 
 import java.util.Date;
 import java.util.Map;
-import java.util.logging.Logger;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
@@ -24,26 +23,19 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * Date: May 1, 2010
  * Time: 6:28:04 PM
  */
-public class HistoricalEODDataStrategyImpl implements TradeHandler, MarketDataStrategy {
-    private ConnectionFactory connectionFactory;
-    private RequestIdGenerator requestIdGenerator;
-    @Inject
-    private Logger logger;
+public class HistoricalEODDataStrategyImpl extends BaseStrategy implements MarketDataStrategy {
     @Inject
     @UnmatchedMarketData
     private MarketDataListener unmatchedRequestListener;
-    private Connection connection;
     final private Map<Integer, MarketDataListener> criteriaRequests;
     private static final int HIST_DATA_SERV_CONNECTED = 2106;
+    private final TradeHandler tradeHandler = new HistoricTradeHandler();
 
     @Inject
     public HistoricalEODDataStrategyImpl(RequestIdGenerator requestIdGenerator, ConnectionFactory connectionFactory) {
-        this.requestIdGenerator = requestIdGenerator;
-        this.connectionFactory = connectionFactory;
-        connection = connectionFactory.getConnection(this);
-        connection.connect();
+        super(requestIdGenerator, connectionFactory);
         criteriaRequests = Maps.newHashMap();
-
+        initialiseConnection(connectionFactory);
     }
 
 
@@ -76,18 +68,10 @@ public class HistoricalEODDataStrategyImpl implements TradeHandler, MarketDataSt
         }
     }
 
-    @Override
-    public void handleHistoricalData(int id, MarketData marketData) {
-        getListener(id).handleData(marketData);
-    }
 
     @Override
-    public void handleError(int id, int errorCode, String errorMessage) {
-        if (!isWarning(errorCode)) {
-            getListener(id).onError(errorCode, errorMessage);
-        } else {
-            logger.warning("Encountered warning code : " + errorCode + " , mesg: " + errorMessage);
-        }
+    protected TradeHandler getTradeHandler() {
+        return tradeHandler;
     }
 
     private boolean isWarning(int errorCode) {
@@ -105,5 +89,21 @@ public class HistoricalEODDataStrategyImpl implements TradeHandler, MarketDataSt
         }
 
         return listener;
+    }
+
+    class HistoricTradeHandler extends TradeHandlerAdapter {
+        @Override
+        public void handleHistoricalData(int id, MarketData marketData) {
+            getListener(id).handleData(marketData);
+        }
+
+        @Override
+        public void handleError(int id, int errorCode, String errorMessage) {
+            if (!isWarning(errorCode)) {
+                getListener(id).onError(errorCode, errorMessage);
+            } else {
+                logger.warning("Encountered warning code : " + errorCode + " , mesg: " + errorMessage);
+            }
+        }
     }
 }

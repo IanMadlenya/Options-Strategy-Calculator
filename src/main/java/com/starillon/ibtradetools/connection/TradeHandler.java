@@ -1,5 +1,6 @@
 package com.starillon.ibtradetools.connection;
 
+import com.starillon.ibtradetools.data.DepthMarketData;
 import com.starillon.ibtradetools.data.MarketData;
 
 /**
@@ -9,7 +10,9 @@ import com.starillon.ibtradetools.data.MarketData;
  * Time: 4:39:53 PM
  */
 public interface TradeHandler {
-    void handleHistoricalData(int id, MarketData marketData);
+    void handleHistoricalData(int requestId, MarketData marketData);
 
-    void handleError(int id, int errorCode, String errorMessage);
+    void handleError(int requestId, int errorCode, String errorMessage);
+
+    void updateDepth(int requestId, DepthMarketData depthMarketData);
 }

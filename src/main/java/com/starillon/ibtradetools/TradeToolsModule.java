@@ -21,7 +21,5 @@ public class TradeToolsModule extends BaseTradeToolsModule {
         bind(MarketDataListener.class).annotatedWith(UnmatchedMarketData.class).to(UnmatchedRequestMarketDataListener.class);
         bind(RequestIdGenerator.class).to(RequestIdGeneratorImpl.class);
         bind(MarketDepthStrategy.class).to(MarketDepthStrategyImpl.class);
-
-
     }
 }

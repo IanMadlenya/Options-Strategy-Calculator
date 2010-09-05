@@ -2,7 +2,10 @@ package com.starillon.ibtradetools.connection;
 
 import com.google.inject.Inject;
 import com.ib.client.*;
+import com.starillon.ibtradetools.data.DepthMarketData;
 import com.starillon.ibtradetools.data.MarketData;
+import com.starillon.ibtradetools.data.Operation;
+import com.starillon.ibtradetools.data.Side;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -96,11 +99,16 @@ class WrapperAdapter implements ConnectionHandler {
     }
 
     @Override
-    public void updateMktDepth(int i, int i1, int i2, int i3, double v, int i4) {
+    public void updateMktDepth(int requestId, int rowId, int operation, int side, double price, int size) {
+        handler.updateDepth(requestId, new DepthMarketData(Side.valueOf(side), Operation.valueOf(operation),
+                rowId, price, size, null));
     }
 
     @Override
-    public void updateMktDepthL2(int i, int i1, String s, int i2, int i3, double v, int i4) {
+    public void updateMktDepthL2(int requestId, int rowId, String marketMaker, int operation, int side, double price,
+                                 int size) {
+        handler.updateDepth(requestId, new DepthMarketData(Side.valueOf(side), Operation.valueOf(operation),
+                rowId, price, size, marketMaker));
     }
 
     @Override
