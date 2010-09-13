@@ -1,8 +1,6 @@
 package com.starillon.ibtradetools;
 
-import com.starillon.ibtradetools.listeners.MarketDataListener;
-import com.starillon.ibtradetools.listeners.UnmatchedMarketData;
-import com.starillon.ibtradetools.listeners.UnmatchedRequestMarketDataListener;
+import com.starillon.ibtradetools.listeners.*;
 import com.starillon.ibtradetools.strategy.*;
 import com.starillon.ibtradetools.util.RequestIdGenerator;
 import com.starillon.ibtradetools.util.RequestIdGeneratorImpl;
@@ -21,5 +19,6 @@ public class TradeToolsModule extends BaseTradeToolsModule {
         bind(MarketDataListener.class).annotatedWith(UnmatchedMarketData.class).to(UnmatchedRequestMarketDataListener.class);
         bind(RequestIdGenerator.class).to(RequestIdGeneratorImpl.class);
         bind(MarketDepthStrategy.class).to(MarketDepthStrategyImpl.class);
+        bind(MarketDepthListener.class).annotatedWith(UnmatchedMarketDepthData.class).to(UnmatchedRequestMarketDepthListener.class);
     }
 }

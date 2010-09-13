@@ -47,4 +47,16 @@ public class DepthMarketData {
     public String getMarketMaker() {
         return marketMaker;
     }
+
+    @Override
+    public String toString() {
+        return "DepthMarketData{" +
+                "side=" + side +
+                ", operation=" + operation +
+                ", position=" + position +
+                ", price=" + price +
+                ", size=" + size +
+                ", marketMaker='" + marketMaker + '\'' +
+                '}';
+    }
 }

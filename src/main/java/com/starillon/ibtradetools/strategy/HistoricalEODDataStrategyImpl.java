@@ -1,6 +1,5 @@
 package com.starillon.ibtradetools.strategy;
 
-import com.google.common.collect.Maps;
 import com.google.inject.Inject;
 import com.starillon.ibtradetools.connection.ConnectionFactory;
 import com.starillon.ibtradetools.connection.TradeHandler;
@@ -13,7 +12,6 @@ import com.starillon.ibtradetools.util.DateConverter;
 import com.starillon.ibtradetools.util.RequestIdGenerator;
 
 import java.util.Date;
-import java.util.Map;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
@@ -23,33 +21,29 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * Date: May 1, 2010
  * Time: 6:28:04 PM
  */
-public class HistoricalEODDataStrategyImpl extends BaseStrategy implements MarketDataStrategy {
+public class HistoricalEODDataStrategyImpl extends BaseStrategy<MarketDataListener> implements MarketDataStrategy {
+    private static final int HIST_DATA_SERV_CONNECTED = 2106;
+    private final TradeHandler tradeHandler = new HistoricTradeHandler();
     @Inject
     @UnmatchedMarketData
     private MarketDataListener unmatchedRequestListener;
-    final private Map<Integer, MarketDataListener> criteriaRequests;
-    private static final int HIST_DATA_SERV_CONNECTED = 2106;
-    private final TradeHandler tradeHandler = new HistoricTradeHandler();
 
     @Inject
     public HistoricalEODDataStrategyImpl(RequestIdGenerator requestIdGenerator, ConnectionFactory connectionFactory) {
         super(requestIdGenerator, connectionFactory);
-        criteriaRequests = Maps.newHashMap();
-        initialiseConnection(connectionFactory);
+        initialiseConnection();
     }
-
 
     @Override
     public void execute(Date date, ContractDataCriteria criteria, MarketDataListener marketDataListener) {
-        assert (connection.isConnected()) : "Connection not established";
         checkNotNull(date, "date is null");
         checkNotNull(criteria, "criteria is null");
         checkNotNull(marketDataListener, "marketDataListener is null");
 
         Integer requestId = requestIdGenerator.nextValue();
-        criteriaRequests.put(requestId, marketDataListener);
+        addListener(requestId, marketDataListener);
 
-        connection.getSocket().reqHistoricalData(requestId, criteria.getContract(),
+        getSocket().reqHistoricalData(requestId, criteria.getContract(),
                 DateConverter.convert(date), criteria.getDuration(), criteria.getBarSize(),
                 criteria.getMarketDataType(), criteria.getRegularTradingHours(),
                 criteria.getDateFormat());
@@ -60,14 +54,18 @@ public class HistoricalEODDataStrategyImpl extends BaseStrategy implements Marke
     public void cancel(MarketDataListener marketDataListener) {
         checkNotNull(marketDataListener, "marketDataListener is null");
 
-        for (Integer requestId : criteriaRequests.keySet()) {
-            if (criteriaRequests.get(requestId).equals(marketDataListener)) {
-                connection.getSocket().cancelHistoricalData(requestId);
-                criteriaRequests.remove(requestId);
-            }
+        Integer requestId = getRequestId(marketDataListener);
+        if (requestId != null) {
+            getSocket().cancelHistoricalData(requestId);
+            remove(requestId);
         }
     }
 
+
+    @Override
+    protected MarketDataListener getUnmatchedListener() {
+        return unmatchedRequestListener;
+    }
 
     @Override
     protected TradeHandler getTradeHandler() {
@@ -78,18 +76,6 @@ public class HistoricalEODDataStrategyImpl extends BaseStrategy implements Marke
         return errorCode == HIST_DATA_SERV_CONNECTED;
     }
 
-    private MarketDataListener getListener(int id) {
-        MarketDataListener listener = criteriaRequests.get(id);
-
-        if (listener == null && id != -1) {
-            logger.warning("Unmatched marker data listener for request id " + id);
-            listener = unmatchedRequestListener;
-        } else {
-            logger.info("Ignore request for listener with id : " + id);
-        }
-
-        return listener;
-    }
 
     class HistoricTradeHandler extends TradeHandlerAdapter {
         @Override
