@@ -23,7 +23,6 @@ public abstract class BaseStrategy<L> {
     protected Logger logger;
     protected RequestIdGenerator requestIdGenerator;
     private ConnectionFactory connectionFactory;
-    ;
     private Connection connection;
     private final Map<Integer, L> listenerRequests;
 
@@ -64,17 +63,11 @@ public abstract class BaseStrategy<L> {
     }
 
     protected L getListener(Integer requestId) {
-        return listenerRequests.get(requestId);
-    }
+        L listener = listenerRequests.get(requestId);
 
-    private L getListener(int id) {
-        L listener = listenerRequests.get(id);
-
-        if (listener == null && id != -1) {
-            logger.warning("Unmatched marker data listener for request id " + id);
+        if (listener == null) {
+            logger.warning("Unmatched marker data listener for request id " + requestId);
             listener = getUnmatchedListener();
-        } else {
-            logger.info("Ignore request for listener with id : " + id);
         }
 
         return listener;

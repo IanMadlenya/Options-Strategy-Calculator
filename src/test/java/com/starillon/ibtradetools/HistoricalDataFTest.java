@@ -1,19 +1,14 @@
 package com.starillon.ibtradetools;
 
-import com.google.inject.Guice;
-import com.google.inject.Injector;
-import com.starillon.ibtradetools.connection.TradeToolsConnectionModule;
 import com.starillon.ibtradetools.contract.*;
 import com.starillon.ibtradetools.data.MarketData;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.Date;
 import java.util.concurrent.CountDownLatch;
 
 @Test(groups = "functional")
-public class HistoricalDataFTest {
-    private MarketDataService marketDataService;
+public class HistoricalDataFTest extends BaseFTest {
 
     @Test
     public void getValidStockData() throws InterruptedException {
@@ -38,13 +33,5 @@ public class HistoricalDataFTest {
         latch.await();
         assert (!listener.isMarketDataError());
         marketDataService.unsubscribe(listener);
-    }
-
-
-    @BeforeMethod
-    protected void setUp() throws Exception {
-        Injector injector = Guice.createInjector(new TradeToolsConnectionModule(),
-                new TradeToolsModule());
-        marketDataService = injector.getInstance(MarketDataService.class);
     }
 }
