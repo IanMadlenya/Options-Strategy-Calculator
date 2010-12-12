@@ -16,7 +16,7 @@ import java.util.concurrent.CountDownLatch;
  */
 @Test(groups = "functional")
 public class MarketDepthFTest extends BaseFTest {
-    @Test
+    @Test(timeOut = 5000)
     public void getMarketDepthData() throws InterruptedException {
 
         CountDownLatch latch = new CountDownLatch(1);

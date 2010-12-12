@@ -5,9 +5,9 @@ import com.ib.client.Contract;
 import com.starillon.ibtradetools.contract.ContractDataCriteria;
 import com.starillon.ibtradetools.listeners.MarketDataListener;
 import com.starillon.ibtradetools.listeners.MarketDepthListener;
-import com.starillon.ibtradetools.strategy.HistoricalEODData;
-import com.starillon.ibtradetools.strategy.MarketDataStrategy;
-import com.starillon.ibtradetools.strategy.MarketDepthStrategy;
+import com.starillon.ibtradetools.strategy.data.HistoricalEODData;
+import com.starillon.ibtradetools.strategy.data.MarketDataStrategy;
+import com.starillon.ibtradetools.strategy.data.MarketDepthStrategy;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package com.starillon.ibtradetools.strategy;
+package com.starillon.ibtradetools.strategy.data;
 
 import com.ib.client.Contract;
 import com.starillon.ibtradetools.listeners.MarketDepthListener;

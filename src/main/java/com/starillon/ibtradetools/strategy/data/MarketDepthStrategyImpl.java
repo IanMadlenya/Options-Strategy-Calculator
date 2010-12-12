@@ -1,4 +1,4 @@
-package com.starillon.ibtradetools.strategy;
+package com.starillon.ibtradetools.strategy.data;
 
 import com.google.inject.Inject;
 import com.ib.client.Contract;
@@ -8,6 +8,7 @@ import com.starillon.ibtradetools.connection.TradeHandlerAdapter;
 import com.starillon.ibtradetools.data.DepthMarketData;
 import com.starillon.ibtradetools.listeners.MarketDepthListener;
 import com.starillon.ibtradetools.listeners.UnmatchedMarketDepthData;
+import com.starillon.ibtradetools.strategy.BaseListenerStrategy;
 import com.starillon.ibtradetools.util.RequestIdGenerator;
 
 import static com.google.common.base.Preconditions.checkNotNull;
@@ -19,7 +20,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * Date: Aug 29, 2010
  * Time: 8:13:54 PM
  */
-public class MarketDepthStrategyImpl extends BaseStrategy<MarketDepthListener> implements MarketDepthStrategy {
+public class MarketDepthStrategyImpl extends BaseListenerStrategy<MarketDepthListener> implements MarketDepthStrategy {
     private final TradeHandler tradeHandler = new DepthTradeHandler();
     @Inject
     @UnmatchedMarketDepthData
@@ -61,6 +62,7 @@ public class MarketDepthStrategyImpl extends BaseStrategy<MarketDepthListener> i
     protected MarketDepthListener getUnmatchedListener() {
         return marketDepthListener;
     }
+
 
     private class DepthTradeHandler extends TradeHandlerAdapter {
         @Override

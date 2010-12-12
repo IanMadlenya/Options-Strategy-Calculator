@@ -1,4 +1,4 @@
-package com.starillon.ibtradetools.strategy;
+package com.starillon.ibtradetools.strategy.data;
 
 import com.google.inject.Inject;
 import com.starillon.ibtradetools.connection.ConnectionFactory;
@@ -8,6 +8,7 @@ import com.starillon.ibtradetools.contract.ContractDataCriteria;
 import com.starillon.ibtradetools.data.MarketData;
 import com.starillon.ibtradetools.listeners.MarketDataListener;
 import com.starillon.ibtradetools.listeners.UnmatchedMarketData;
+import com.starillon.ibtradetools.strategy.BaseListenerStrategy;
 import com.starillon.ibtradetools.util.DateConverter;
 import com.starillon.ibtradetools.util.RequestIdGenerator;
 
@@ -21,7 +22,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * Date: May 1, 2010
  * Time: 6:28:04 PM
  */
-public class HistoricalEODDataStrategyImpl extends BaseStrategy<MarketDataListener> implements MarketDataStrategy {
+public class HistoricalEODDataStrategyImpl extends BaseListenerStrategy<MarketDataListener> implements MarketDataStrategy {
     private static final int HIST_DATA_SERV_CONNECTED = 2106;
     private final TradeHandler tradeHandler = new HistoricTradeHandler();
     @Inject

@@ -10,7 +10,7 @@ import java.util.concurrent.CountDownLatch;
 @Test(groups = "functional")
 public class HistoricalDataFTest extends BaseFTest {
 
-    @Test
+    @Test(timeOut = 5000)
     public void getValidStockData() throws InterruptedException {
         ContractDataCriteria criteria = new ContractDataCriteria();
         criteria.setDuration(Duration.DAYS);
