@@ -1,12 +1,14 @@
 package com.starillon.ibtradetools.connection;
 
 import com.google.inject.Inject;
+import com.google.inject.internal.Lists;
 import com.ib.client.*;
 import com.starillon.ibtradetools.data.DepthMarketData;
 import com.starillon.ibtradetools.data.MarketData;
 import com.starillon.ibtradetools.data.Operation;
 import com.starillon.ibtradetools.data.Side;
 
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,7 +22,7 @@ import java.util.logging.Logger;
 class WrapperAdapter implements ConnectionHandler {
     @Inject
     private Logger logger;
-    private TradeHandler handler;
+    private List<TradeHandler> handlers = Lists.newArrayList();
 
     @Override
     public void tickPrice(int i, int i1, double v, int i2) {
@@ -80,7 +82,9 @@ class WrapperAdapter implements ConnectionHandler {
 
     @Override
     public void contractDetails(int requestId, ContractDetails contractDetails) {
-        handler.contractDetails(requestId, contractDetails);
+        for (TradeHandler handler : handlers) {
+            handler.contractDetails(requestId, contractDetails);
+        }
     }
 
     @Override
@@ -89,7 +93,9 @@ class WrapperAdapter implements ConnectionHandler {
 
     @Override
     public void contractDetailsEnd(int requestId) {
-        handler.contractDetailsEnd(requestId);
+        for (TradeHandler handler : handlers) {
+            handler.contractDetailsEnd(requestId);
+        }
     }
 
     @Override
@@ -102,15 +108,19 @@ class WrapperAdapter implements ConnectionHandler {
 
     @Override
     public void updateMktDepth(int requestId, int rowId, int operation, int side, double price, int size) {
-        handler.updateDepth(requestId, new DepthMarketData(Side.valueOf(side), Operation.valueOf(operation),
-                rowId, price, size, null));
+        for (TradeHandler handler : handlers) {
+            handler.updateDepth(requestId, new DepthMarketData(Side.valueOf(side), Operation.valueOf(operation),
+                    rowId, price, size, null));
+        }
     }
 
     @Override
     public void updateMktDepthL2(int requestId, int rowId, String marketMaker, int operation, int side, double price,
                                  int size) {
-        handler.updateDepth(requestId, new DepthMarketData(Side.valueOf(side), Operation.valueOf(operation),
-                rowId, price, size, marketMaker));
+        for (TradeHandler handler : handlers) {
+            handler.updateDepth(requestId, new DepthMarketData(Side.valueOf(side), Operation.valueOf(operation),
+                    rowId, price, size, marketMaker));
+        }
     }
 
     @Override
@@ -128,7 +138,10 @@ class WrapperAdapter implements ConnectionHandler {
     @Override
     public void historicalData(int reqId, String date, double open, double high, double low, double close,
                                int volume, int count, double wap, boolean hasGaps) {
-        handler.handleHistoricalData(reqId, new MarketData(date, open, high, low, close, volume, count, wap, hasGaps));
+        for (TradeHandler handler : handlers) {
+            handler.handleHistoricalData(reqId, new MarketData(date, open, high, low, close, volume, count, wap, hasGaps));
+
+        }
     }
 
     @Override
@@ -166,19 +179,25 @@ class WrapperAdapter implements ConnectionHandler {
     @Override
     public void error(Exception e) {
         logger.log(Level.SEVERE, "Error encountered : " + e, e);
-        handler.handleError(0, 0, e.toString());
+        for (TradeHandler handler : handlers) {
+            handler.handleError(0, 0, e.toString());
+        }
     }
 
     @Override
     public void error(String s) {
         logger.log(Level.SEVERE, "Error encountered : " + s);
-        handler.handleError(0, 0, s);
+        for (TradeHandler handler : handlers) {
+            handler.handleError(0, 0, s);
+        }
     }
 
     @Override
     public void error(int i, int i1, String s) {
         logger.log(Level.SEVERE, "Error encountered, id : " + i + ", code : " + i1 + " mesg : " + s);
-        handler.handleError(i, i1, s);
+        for (TradeHandler handler : handlers) {
+            handler.handleError(i, i1, s);
+        }
     }
 
     @Override
@@ -186,7 +205,7 @@ class WrapperAdapter implements ConnectionHandler {
     }
 
     @Override
-    public void setHandler(TradeHandler handler) {
-        this.handler = handler;
+    public void addHandler(TradeHandler handler) {
+        handlers.add(handler);
     }
 }

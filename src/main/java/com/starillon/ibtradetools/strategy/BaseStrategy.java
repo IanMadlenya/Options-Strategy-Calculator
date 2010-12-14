@@ -26,7 +26,6 @@ public abstract class BaseStrategy {
     public BaseStrategy(RequestIdGenerator requestIdGenerator, ConnectionFactory connectionFactory) {
         this.requestIdGenerator = requestIdGenerator;
         this.connectionFactory = connectionFactory;
-        ;
     }
 
     protected EClientSocket getSocket() {

@@ -17,11 +17,15 @@ public class ConnectionImpl implements Connection {
     private final int clientId = System.identityHashCode(this);
 
     public ConnectionImpl(ConnectionHandler handler, TradeHandler tradeHandler, String host, int port) {
+        this(handler, host, port);
+        this.handler.addHandler(tradeHandler);
+    }
+
+    public ConnectionImpl(ConnectionHandler handler, String host, int port) {
         this.host = host;
         this.port = port;
         this.handler = handler;
         connection = new EClientSocket(this.handler);
-        this.handler.setHandler(tradeHandler);
     }
 
     @Override

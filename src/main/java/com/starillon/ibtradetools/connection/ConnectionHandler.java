@@ -8,7 +8,6 @@ import com.ib.client.EWrapper;
  * Date: May 3, 2010
  * Time: 4:33:56 PM
  */
-public interface ConnectionHandler extends EWrapper
-{
-    void setHandler(TradeHandler handler);
+public interface ConnectionHandler extends EWrapper {
+    void addHandler(TradeHandler handler);
 }
