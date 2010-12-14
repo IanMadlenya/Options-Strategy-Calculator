@@ -79,7 +79,8 @@ class WrapperAdapter implements ConnectionHandler {
     }
 
     @Override
-    public void contractDetails(int i, ContractDetails contractDetails) {
+    public void contractDetails(int requestId, ContractDetails contractDetails) {
+        handler.contractDetails(requestId, contractDetails);
     }
 
     @Override
@@ -87,7 +88,8 @@ class WrapperAdapter implements ConnectionHandler {
     }
 
     @Override
-    public void contractDetailsEnd(int i) {
+    public void contractDetailsEnd(int requestId) {
+        handler.contractDetailsEnd(requestId);
     }
 
     @Override

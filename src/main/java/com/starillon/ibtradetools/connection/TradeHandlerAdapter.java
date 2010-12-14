@@ -1,5 +1,6 @@
 package com.starillon.ibtradetools.connection;
 
+import com.ib.client.ContractDetails;
 import com.starillon.ibtradetools.TradeException;
 import com.starillon.ibtradetools.data.DepthMarketData;
 import com.starillon.ibtradetools.data.MarketData;
@@ -24,6 +25,16 @@ public class TradeHandlerAdapter implements TradeHandler {
 
     @Override
     public void updateDepth(int requestId, DepthMarketData depthMarketData) {
+        throw new TradeException("Not Implemented");
+    }
+
+    @Override
+    public void contractDetails(int requestId, ContractDetails contractDetails) {
+        throw new TradeException("Not Implemented");
+    }
+
+    @Override
+    public void contractDetailsEnd(int requestId) {
         throw new TradeException("Not Implemented");
     }
 }

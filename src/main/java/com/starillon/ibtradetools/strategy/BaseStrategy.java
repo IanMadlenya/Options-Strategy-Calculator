@@ -26,11 +26,7 @@ public abstract class BaseStrategy {
     public BaseStrategy(RequestIdGenerator requestIdGenerator, ConnectionFactory connectionFactory) {
         this.requestIdGenerator = requestIdGenerator;
         this.connectionFactory = connectionFactory;
-    }
-
-    protected void initialiseConnection() {
-        connection = connectionFactory.getConnection(getTradeHandler());
-        connection.connect();
+        ;
     }
 
     protected EClientSocket getSocket() {
@@ -40,4 +36,9 @@ public abstract class BaseStrategy {
 
     protected abstract TradeHandler getTradeHandler();
 
+
+    protected void initialiseConnection() {
+        connection = connectionFactory.getConnection(getTradeHandler());
+        connection.connect();
+    }
 }

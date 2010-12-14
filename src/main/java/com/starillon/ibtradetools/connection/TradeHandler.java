@@ -1,5 +1,6 @@
 package com.starillon.ibtradetools.connection;
 
+import com.ib.client.ContractDetails;
 import com.starillon.ibtradetools.data.DepthMarketData;
 import com.starillon.ibtradetools.data.MarketData;
 
@@ -15,4 +16,8 @@ public interface TradeHandler {
     void handleError(int requestId, int errorCode, String errorMessage);
 
     void updateDepth(int requestId, DepthMarketData depthMarketData);
+
+    void contractDetails(int requestId, ContractDetails contractDetails);
+
+    void contractDetailsEnd(int requestId);
 }

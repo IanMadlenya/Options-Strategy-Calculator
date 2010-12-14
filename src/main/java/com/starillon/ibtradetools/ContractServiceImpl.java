@@ -1,7 +1,9 @@
 package com.starillon.ibtradetools;
 
+import com.google.inject.Inject;
 import com.ib.client.Contract;
 import com.ib.client.ContractDetails;
+import com.starillon.ibtradetools.strategy.contract.OptionsDetailsStrategy;
 
 import java.util.List;
 
@@ -13,8 +15,11 @@ import java.util.List;
  * Time: 5:21:05 PM
  */
 public class ContractServiceImpl implements ContractService {
+    @Inject
+    private OptionsDetailsStrategy optionDetailsStrategy;
+
     @Override
     public List<ContractDetails> listOptionsForUnderlying(Contract underlying) {
-        return null;
+        return optionDetailsStrategy.listOptions(underlying);
     }
 }

@@ -3,7 +3,7 @@ package com.starillon.ibtradetools;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.starillon.ibtradetools.connection.TradeToolsConnectionModule;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
 
 /**
  * Copyright 2010 Starillon Pty Ltd
@@ -14,11 +14,14 @@ import org.testng.annotations.BeforeMethod;
  */
 public class BaseFTest {
     protected MarketDataService marketDataService;
+    protected ContractService contractService;
+    private Injector injector;
 
-    @BeforeMethod
+    @BeforeClass
     protected void setUp() throws Exception {
-        Injector injector = Guice.createInjector(new TradeToolsConnectionModule(),
+        injector = Guice.createInjector(new TradeToolsConnectionModule(),
                 new TradeToolsModule());
         marketDataService = injector.getInstance(MarketDataService.class);
+        contractService = injector.getInstance(ContractService.class);
     }
 }

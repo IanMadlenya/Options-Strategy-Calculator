@@ -1,6 +1,8 @@
 package com.starillon.ibtradetools;
 
 import com.starillon.ibtradetools.listeners.*;
+import com.starillon.ibtradetools.strategy.contract.OptionsDetailsStrategy;
+import com.starillon.ibtradetools.strategy.contract.OptionsDetailsStrategyImpl;
 import com.starillon.ibtradetools.strategy.data.*;
 import com.starillon.ibtradetools.util.RequestIdGenerator;
 import com.starillon.ibtradetools.util.RequestIdGeneratorImpl;
@@ -15,6 +17,7 @@ public class TradeToolsModule extends BaseTradeToolsModule {
     @Override
     protected void configure() {
         bind(ContractService.class).to(ContractServiceImpl.class);
+        bind(OptionsDetailsStrategy.class).to(OptionsDetailsStrategyImpl.class);
         bind(MarketDataService.class).to(MarketDataServiceImpl.class);
         bind(MarketDataStrategy.class).annotatedWith(HistoricalEODData.class).to(HistoricalEODDataStrategyImpl.class);
         bind(MarketDataListener.class).annotatedWith(UnmatchedMarketData.class).to(UnmatchedRequestMarketDataListener.class);
