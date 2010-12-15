@@ -1,9 +1,8 @@
 package com.starillon.ibtradetools.connection;
 
 import com.ib.client.ContractDetails;
-import com.starillon.ibtradetools.TradeException;
 import com.starillon.ibtradetools.data.DepthMarketData;
-import com.starillon.ibtradetools.data.MarketData;
+import com.starillon.ibtradetools.data.EODMarketData;
 
 /**
  * Copyright 2010 Starillon Pty Ltd
@@ -14,27 +13,35 @@ import com.starillon.ibtradetools.data.MarketData;
  */
 public class TradeHandlerAdapter implements TradeHandler {
     @Override
-    public void handleHistoricalData(int requestId, MarketData marketData) {
-        throw new TradeException("Not Implemented");
+    public void handleHistoricalData(int requestId, EODMarketData eodMarketData) {
     }
 
     @Override
     public void handleError(int requestId, int errorCode, String errorMessage) {
-        throw new TradeException("Not Implemented");
     }
 
     @Override
     public void updateDepth(int requestId, DepthMarketData depthMarketData) {
-        throw new TradeException("Not Implemented");
     }
 
     @Override
     public void contractDetails(int requestId, ContractDetails contractDetails) {
-        throw new TradeException("Not Implemented");
     }
 
     @Override
     public void contractDetailsEnd(int requestId) {
-        throw new TradeException("Not Implemented");
+    }
+
+    @Override
+    public void handlePrice(int requestId, int fieldId, double price, int canAutoExecute) {
+    }
+
+    @Override
+    public void handleSize(int requestId, int fieldId, int size) {
+    }
+
+    @Override
+    public void handleOptionData(int requestId, int fieldId, double impliedVolatility, double delta, double modelPrice,
+                                 double pvDividend) {
     }
 }

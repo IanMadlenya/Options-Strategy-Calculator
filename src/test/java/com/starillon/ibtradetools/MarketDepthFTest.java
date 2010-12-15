@@ -48,6 +48,7 @@ public class MarketDepthFTest extends BaseFTest {
 
         @Override
         public void onError(int errorCode, String errorMessage) {
+            isError = true;
             latch.countDown();
         }
     }

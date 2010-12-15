@@ -4,7 +4,7 @@ import com.google.inject.Inject;
 import com.google.inject.internal.Lists;
 import com.ib.client.*;
 import com.starillon.ibtradetools.data.DepthMarketData;
-import com.starillon.ibtradetools.data.MarketData;
+import com.starillon.ibtradetools.data.EODMarketData;
 import com.starillon.ibtradetools.data.Operation;
 import com.starillon.ibtradetools.data.Side;
 
@@ -25,15 +25,25 @@ class WrapperAdapter implements ConnectionHandler {
     private List<TradeHandler> handlers = Lists.newArrayList();
 
     @Override
-    public void tickPrice(int i, int i1, double v, int i2) {
+    public void tickPrice(int requestId, int field, double price, int canAutoExecute) {
+        for (TradeHandler handler : handlers) {
+            handler.handlePrice(requestId, field, price, canAutoExecute);
+        }
     }
 
     @Override
-    public void tickSize(int i, int i1, int i2) {
+    public void tickSize(int requestId, int fieldId, int size) {
+        for (TradeHandler handler : handlers) {
+            handler.handleSize(requestId, fieldId, size);
+        }
     }
 
     @Override
-    public void tickOptionComputation(int i, int i1, double v, double v1, double v2, double v3) {
+    public void tickOptionComputation(int requestId, int fieldId, double impliedVolatility, double delta,
+                                      double modelPrice, double pvDividend) {
+        for (TradeHandler handler : handlers) {
+            handler.handleOptionData(requestId, fieldId, impliedVolatility, delta, modelPrice, pvDividend);
+        }
     }
 
     @Override
@@ -139,7 +149,7 @@ class WrapperAdapter implements ConnectionHandler {
     public void historicalData(int reqId, String date, double open, double high, double low, double close,
                                int volume, int count, double wap, boolean hasGaps) {
         for (TradeHandler handler : handlers) {
-            handler.handleHistoricalData(reqId, new MarketData(date, open, high, low, close, volume, count, wap, hasGaps));
+            handler.handleHistoricalData(reqId, new EODMarketData(date, open, high, low, close, volume, count, wap, hasGaps));
 
         }
     }

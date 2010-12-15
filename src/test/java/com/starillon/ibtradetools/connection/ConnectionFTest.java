@@ -2,7 +2,7 @@ package com.starillon.ibtradetools.connection;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.starillon.ibtradetools.data.MarketData;
+import com.starillon.ibtradetools.data.EODMarketData;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -21,7 +21,7 @@ public class ConnectionFTest {
         Connection connection = connectionFactory.getConnection(new TradeHandlerAdapter() {
 
             @Override
-            public void handleHistoricalData(int id, MarketData marketData) {
+            public void handleHistoricalData(int id, EODMarketData marketData) {
                 assert (false);
             }
 
@@ -43,7 +43,7 @@ public class ConnectionFTest {
     public void connection_local_failure() {
         Connection connection = connectionFactory.getConnection(new TradeHandlerAdapter() {
             @Override
-            public void handleHistoricalData(int id, MarketData marketData) {
+            public void handleHistoricalData(int id, EODMarketData marketData) {
 
             }
 

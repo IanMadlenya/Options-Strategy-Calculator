@@ -3,7 +3,6 @@ package com.starillon.ibtradetools.strategy.data;
 import com.google.inject.Inject;
 import com.ib.client.Contract;
 import com.starillon.ibtradetools.connection.ConnectionFactory;
-import com.starillon.ibtradetools.connection.TradeHandler;
 import com.starillon.ibtradetools.connection.TradeHandlerAdapter;
 import com.starillon.ibtradetools.data.DepthMarketData;
 import com.starillon.ibtradetools.listeners.MarketDepthListener;
@@ -21,7 +20,6 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * Time: 8:13:54 PM
  */
 public class MarketDepthStrategyImpl extends BaseListenerStrategy<MarketDepthListener> implements MarketDepthStrategy {
-    private final TradeHandler tradeHandler = new DepthTradeHandler();
     @Inject
     @UnmatchedMarketDepthData
     private MarketDepthListener marketDepthListener;
@@ -29,12 +27,8 @@ public class MarketDepthStrategyImpl extends BaseListenerStrategy<MarketDepthLis
     @Inject
     public MarketDepthStrategyImpl(RequestIdGenerator requestIdGenerator, ConnectionFactory connectionFactory) {
         super(requestIdGenerator, connectionFactory);
+        tradeHandler = new DepthTradeHandler();
         initialiseConnection();
-    }
-
-    @Override
-    protected TradeHandler getTradeHandler() {
-        return tradeHandler;
     }
 
     @Override

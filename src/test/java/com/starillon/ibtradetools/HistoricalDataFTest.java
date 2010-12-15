@@ -1,7 +1,7 @@
 package com.starillon.ibtradetools;
 
 import com.starillon.ibtradetools.contract.*;
-import com.starillon.ibtradetools.data.MarketData;
+import com.starillon.ibtradetools.data.EODMarketData;
 import org.testng.annotations.Test;
 
 import java.util.Date;
@@ -21,9 +21,9 @@ public class HistoricalDataFTest extends BaseFTest {
 
         final CountDownLatch latch = new CountDownLatch(1);
 
-        TestMarketDataListener listener = new TestMarketDataListener(latch) {
+        TestEODMarketDataListener listener = new TestEODMarketDataListener(latch) {
             @Override
-            public void handleData(MarketData marketData) {
+            public void handleData(EODMarketData marketData) {
                 System.err.println("Market data : " + marketData);
                 super.handleData(marketData);
             }

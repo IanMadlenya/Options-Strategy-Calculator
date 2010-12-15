@@ -1,7 +1,6 @@
 package com.starillon.ibtradetools.connection;
 
 import com.ib.client.EClientSocket;
-import com.starillon.ibtradetools.TradeException;
 
 /**
  * Copyright 2010 Starillon Pty Ltd
@@ -28,16 +27,22 @@ public class ConnectionImpl implements Connection {
         connection = new EClientSocket(this.handler);
     }
 
+    public void addTradHandler(TradeHandler tradeHandler) {
+        handler.addHandler(tradeHandler);
+    }
+
     @Override
     public void connect() {
-        checkAlreadyConnected();
-        connection.eConnect(host, port, clientId);
+        if (!connection.isConnected()) {
+            connection.eConnect(host, port, clientId);
+        }
     }
 
     @Override
     public void connect(String host, int port) {
-        checkAlreadyConnected();
-        connection.eConnect(host, port, clientId);
+        if (!connection.isConnected()) {
+            connection.eConnect(host, port, clientId);
+        }
     }
 
     @Override
@@ -55,12 +60,5 @@ public class ConnectionImpl implements Connection {
     @Override
     public EClientSocket getSocket() {
         return connection;
-    }
-
-
-    private void checkAlreadyConnected() {
-        if (connection.isConnected()) {
-            throw new TradeException("Already connected");
-        }
     }
 }

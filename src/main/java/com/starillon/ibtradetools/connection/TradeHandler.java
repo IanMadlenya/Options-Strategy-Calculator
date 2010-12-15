@@ -2,7 +2,7 @@ package com.starillon.ibtradetools.connection;
 
 import com.ib.client.ContractDetails;
 import com.starillon.ibtradetools.data.DepthMarketData;
-import com.starillon.ibtradetools.data.MarketData;
+import com.starillon.ibtradetools.data.EODMarketData;
 
 /**
  * Copyright 2010 Starillon Pty Ltd
@@ -11,7 +11,7 @@ import com.starillon.ibtradetools.data.MarketData;
  * Time: 4:39:53 PM
  */
 public interface TradeHandler {
-    void handleHistoricalData(int requestId, MarketData marketData);
+    void handleHistoricalData(int requestId, EODMarketData eodMarketData);
 
     void handleError(int requestId, int errorCode, String errorMessage);
 
@@ -20,4 +20,11 @@ public interface TradeHandler {
     void contractDetails(int requestId, ContractDetails contractDetails);
 
     void contractDetailsEnd(int requestId);
+
+    void handlePrice(int requestId, int fieldId, double price, int canAutoExecute);
+
+    void handleSize(int requestId, int fieldId, int size);
+
+    void handleOptionData(int requestId, int fieldId, double impliedVolatility, double delta, double modelPrice,
+                          double pvDividend);
 }

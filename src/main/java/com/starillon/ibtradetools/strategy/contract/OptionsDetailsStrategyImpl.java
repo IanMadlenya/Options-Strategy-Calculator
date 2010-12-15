@@ -6,7 +6,6 @@ import com.google.inject.internal.Lists;
 import com.ib.client.Contract;
 import com.ib.client.ContractDetails;
 import com.starillon.ibtradetools.connection.ConnectionFactory;
-import com.starillon.ibtradetools.connection.TradeHandler;
 import com.starillon.ibtradetools.connection.TradeHandlerAdapter;
 import com.starillon.ibtradetools.strategy.BaseStrategy;
 import com.starillon.ibtradetools.util.RequestIdGenerator;
@@ -27,13 +26,13 @@ import static com.google.common.base.Preconditions.checkNotNull;
 public class OptionsDetailsStrategyImpl extends BaseStrategy implements OptionsDetailsStrategy {
     @Inject
     private Logger logger;
-    private TradeHandler tradeHandler = new OptionsDetailsTradeHandler();
     private Map<Integer, List<ContractDetails>> resultsMap = Maps.newHashMap();
     private Map<Integer, Boolean> completedRequestsMap = Maps.newHashMap();
 
     @Inject
     public OptionsDetailsStrategyImpl(RequestIdGenerator requestIdGenerator, ConnectionFactory connectionFactory) {
         super(requestIdGenerator, connectionFactory);
+        tradeHandler = new OptionsDetailsTradeHandler();
         initialiseConnection();
     }
 
@@ -61,11 +60,6 @@ public class OptionsDetailsStrategyImpl extends BaseStrategy implements OptionsD
     private Boolean isComplete(Integer requestId) {
         Boolean completed = completedRequestsMap.get(requestId);
         return completed != null && completed;
-    }
-
-    @Override
-    protected TradeHandler getTradeHandler() {
-        return tradeHandler;
     }
 
     class OptionsDetailsTradeHandler extends TradeHandlerAdapter {

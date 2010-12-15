@@ -4,11 +4,10 @@ import com.starillon.ibtradetools.data.MarketData;
 
 /**
  * Copyright 2010 Starillon Pty Ltd
- * <p/>
  * User: markfrench
- * Date: Aug 22, 2010
- * Time: 5:17:03 PM
+ * Date: 15/12/10
+ * Time: 12:14 PM
  */
 public interface MarketDataListener extends DataListener {
-    void handleData(MarketData marketData);
+    void handle(MarketData marketData);
 }

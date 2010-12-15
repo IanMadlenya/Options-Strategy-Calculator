@@ -19,10 +19,12 @@ public class TradeToolsModule extends BaseTradeToolsModule {
         bind(ContractService.class).to(ContractServiceImpl.class);
         bind(OptionsDetailsStrategy.class).to(OptionsDetailsStrategyImpl.class);
         bind(MarketDataService.class).to(MarketDataServiceImpl.class);
-        bind(MarketDataStrategy.class).annotatedWith(HistoricalEODData.class).to(HistoricalEODDataStrategyImpl.class);
-        bind(MarketDataListener.class).annotatedWith(UnmatchedMarketData.class).to(UnmatchedRequestMarketDataListener.class);
+        bind(EODMarketDataStrategy.class).annotatedWith(HistoricalEODData.class).to(HistoricalEODDataStrategyImpl.class);
+        bind(EODMarketDataListener.class).annotatedWith(UnmatchedEODMarketData.class).to(UnmatchedRequestEODMarketDataListener.class);
         bind(RequestIdGenerator.class).to(RequestIdGeneratorImpl.class);
         bind(MarketDepthStrategy.class).to(MarketDepthStrategyImpl.class);
         bind(MarketDepthListener.class).annotatedWith(UnmatchedMarketDepthData.class).to(UnmatchedRequestMarketDepthListener.class);
+        bind(MarketDataListener.class).annotatedWith(UnmatchedMarketData.class).to(UnmatchedMarketDataListener.class);
+        bind(MarketDataStrategy.class).to(MarketDataStrategyImpl.class);
     }
 }

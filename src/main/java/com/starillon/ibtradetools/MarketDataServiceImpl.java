@@ -3,8 +3,10 @@ package com.starillon.ibtradetools;
 import com.google.inject.Inject;
 import com.ib.client.Contract;
 import com.starillon.ibtradetools.contract.ContractDataCriteria;
+import com.starillon.ibtradetools.listeners.EODMarketDataListener;
 import com.starillon.ibtradetools.listeners.MarketDataListener;
 import com.starillon.ibtradetools.listeners.MarketDepthListener;
+import com.starillon.ibtradetools.strategy.data.EODMarketDataStrategy;
 import com.starillon.ibtradetools.strategy.data.HistoricalEODData;
 import com.starillon.ibtradetools.strategy.data.MarketDataStrategy;
 import com.starillon.ibtradetools.strategy.data.MarketDepthStrategy;
@@ -20,18 +22,30 @@ import java.util.Date;
 class MarketDataServiceImpl implements MarketDataService {
     @Inject
     @HistoricalEODData
-    private MarketDataStrategy stockEODStrategy;
+    private EODMarketDataStrategy eodStrategyEOD;
     @Inject
     private MarketDepthStrategy marketDepthStrategy;
+    @Inject
+    private MarketDataStrategy marketDataStrategy;
 
     @Override
-    public void requestStockEODData(Date date, ContractDataCriteria criteria, MarketDataListener marketDataListener) {
-        stockEODStrategy.execute(date, criteria, marketDataListener);
+    public void requestMarketData(Contract contract, boolean snapshot, MarketDataListener marketDataListener) {
+        marketDataStrategy.execute(contract, snapshot, marketDataListener);
     }
 
     @Override
     public void unsubscribe(MarketDataListener marketDataListener) {
-        stockEODStrategy.cancel(marketDataListener);
+        marketDataStrategy.cancel(marketDataListener);
+    }
+
+    @Override
+    public void requestStockEODData(Date date, ContractDataCriteria criteria, EODMarketDataListener eodMarketDataListener) {
+        eodStrategyEOD.execute(date, criteria, eodMarketDataListener);
+    }
+
+    @Override
+    public void unsubscribe(EODMarketDataListener eodMarketDataListener) {
+        eodStrategyEOD.cancel(eodMarketDataListener);
     }
 
     @Override
