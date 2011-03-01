@@ -78,7 +78,9 @@ public class OptionsDetailsStrategyImpl extends BaseStrategy implements OptionsD
 
         @Override
         public void handleError(int requestId, int errorCode, String errorMessage) {
-            System.err.println(errorMessage);
+            logger.warning("Error getting option details for request id : " + requestId + ", code : " + errorCode +
+                    " : " + errorMessage);
+            completedRequestsMap.put(requestId, Boolean.TRUE);
         }
     }
 }
