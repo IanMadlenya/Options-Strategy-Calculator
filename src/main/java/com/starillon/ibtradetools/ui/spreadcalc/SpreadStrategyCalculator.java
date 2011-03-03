@@ -68,7 +68,7 @@ public class SpreadStrategyCalculator extends JFrame {
         layoutPanels();
         registerListeners();
         initTradeServices();
-        setSize(800, 600);
+        setSize(800, 705);
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }

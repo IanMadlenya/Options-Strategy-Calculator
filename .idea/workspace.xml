@@ -6,16 +6,26 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/forms-src.zip" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/forms.jar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/JGoodies_Forms.xml" />
-    </list>
-    <list id="84912390-66c6-44ca-a479-b95622739a7b" name="ignore" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/contract/ContractPriceComparable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTableModelRow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IBTradeTools.iml" afterPath="$PROJECT_DIR$/IBTradeTools.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/strategy/contract/OptionsDetailsStrategyImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/strategy/contract/OptionsDetailsStrategyImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyCalculator.java" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyCalculator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyCalculator.jfd" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyCalculator.jfd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyDetails.java" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyDetails.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategySelector.java" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategySelector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategySelector.jfd" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategySelector.jfd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTab.java" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTab.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTab.jfd" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTab.jfd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTabPanel.java" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTabPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTabPanel.jfd" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTabPanel.jfd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTableModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTableModel.java" />
     </list>
     <ignored path="$USER_HOME$/.griffon/" />
     <ignored path="$USER_HOME$/.grails/" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="11d6784a-2e76-4798-8685-d28ddb74be72" time="1294650213334" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +112,19 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTab.java" line="102" class="com.starillon.ibtradetools.ui.spreadcalc.SpreadStrategyTab" package="com.starillon.ibtradetools.ui.spreadcalc">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
@@ -143,73 +166,87 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SpreadStrategyTab.jfd" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTab.jfd">
-          <provider selected="true" editor-type-id="JFormDesigner">
-            <state propertiesWidth="504" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpreadStrategyCalculator.jfd" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyCalculator.jfd">
-          <provider selected="true" editor-type-id="JFormDesigner">
-            <state propertiesWidth="441" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpreadStrategyCalculator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyCalculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="1249" selection-end="1249" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1298957791000" expanded="true" signature="1611:2464" placeholder="// JFormDesigner - Component initialization - DO NOT MODIFY" />
-                <marker date="1298957791000" expanded="false" signature="3575:3797" placeholder="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SpreadStrategyTabPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTabPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="18" selection-start="2151" selection-end="2151" vertical-scroll-proportion="0.0">
+            <state line="20" column="0" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="false" />
-                <marker date="1298957791000" expanded="true" signature="437:1731" placeholder="// JFormDesigner - Component initialization - DO NOT MODIFY" />
-                <marker date="1298957791000" expanded="true" signature="1743:2006" placeholder="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+                <marker date="1299123899000" expanded="false" signature="437:1631" placeholder="// JFormDesigner - Component initialization - DO NOT MODIFY" />
+                <marker date="1299123899000" expanded="true" signature="1643:1906" placeholder="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpreadStrategyTab.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTab.java">
+      <file leaf-file-name="SpreadStrategyTableModelRow.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTableModelRow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="0" selection-start="2876" selection-end="2876" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1298957791000" expanded="true" signature="649:2233" placeholder="// JFormDesigner - Component initialization - DO NOT MODIFY" />
-                <marker date="1298957791000" expanded="false" signature="2346:2643" placeholder="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
-              </folding>
+            <state line="10" column="13" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpreadStrategyTableModel.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SpreadStrategyTableModel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTableModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.73081607">
+            <state line="14" column="13" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpreadStrategyTab.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTab.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="104" column="29" selection-start="3984" selection-end="3984" vertical-scroll-proportion="0.8404385">
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1299126048000" expanded="false" signature="782:2811" placeholder="// JFormDesigner - Component initialization - DO NOT MODIFY" />
+                <marker date="1299126048000" expanded="true" signature="3034:3421" placeholder="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContractServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ContractServiceImpl.java">
+      <file leaf-file-name="SpreadStrategyDetails.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0">
+            <state line="43" column="18" selection-start="884" selection-end="884" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpreadStrategySelector.jfd" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategySelector.jfd">
+          <provider selected="true" editor-type-id="JFormDesigner">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpreadStrategyTab.jfd" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTab.jfd">
+          <provider selected="true" editor-type-id="JFormDesigner">
+            <state propertiesWidth="397" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpreadStrategySelector.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategySelector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="32" selection-start="2117" selection-end="2117" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1299125916000" expanded="true" signature="1725:4960" placeholder="// JFormDesigner - Component initialization - DO NOT MODIFY" />
+                <marker date="1299125916000" expanded="true" signature="6304:6916" placeholder="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OptionsDetailsStrategy.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/strategy/contract/OptionsDetailsStrategy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="0" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -218,25 +255,7 @@
       <file leaf-file-name="OptionsDetailsStrategyImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/strategy/contract/OptionsDetailsStrategyImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="0" selection-start="2829" selection-end="2829" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MarketDataFTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/starillon/ibtradetools/MarketDataFTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="46" selection-start="514" selection-end="523" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseFTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/starillon/ibtradetools/BaseFTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="4" selection-start="365" selection-end="519" vertical-scroll-proportion="0.0">
+            <state line="62" column="37" selection-start="2296" selection-end="2296" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -256,22 +275,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/junk.xml" />
-        <option value="/Volumes/GARMIN/Garmin/History/2011-02-12-20-43-45.tcx" />
-        <option value="/Volumes/GARMIN/Garmin/History/2011-02-11-20-28-12.tcx" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTabPanel.jfd" />
         <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/contract/ContractMonth.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategySelector.jfd" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategySelector.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyDetails.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTabPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyCalculator.jfd" />
         <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyCalculator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/strategy/contract/OptionsDetailsStrategyImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTab.jfd" />
-        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTab.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTableModelRow.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTableModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTabPanel.jfd" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyCalculator.jfd" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategySelector.jfd" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/contract/ContractPriceComparable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/strategy/contract/OptionsDetailsStrategyImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTabPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTab.jfd" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyDetails.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategySelector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTab.java" />
       </list>
     </option>
   </component>
@@ -364,9 +383,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Favorites" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -374,6 +390,148 @@
               <option name="myItemId" value="IBTradeTools" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBTradeTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: com.jgoodies:binding:2.0.6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="binding-2.0.6.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBTradeTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: com.jgoodies:binding:2.0.6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="binding-2.0.6.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="list" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBTradeTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: com.jgoodies:binding:2.0.6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="binding-2.0.6.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adapter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBTradeTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.6 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBTradeTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.6 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBTradeTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.6 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="table" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBTradeTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.6 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -396,148 +554,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="integration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IBTradeTools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IBTradeTools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IBTradeTools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IBTradeTools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="convertors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IBTradeTools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IBTradeTools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="connection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IBTradeTools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IBTradeTools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="options" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IBTradeTools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IBTradeTools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ibtradetools" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -659,21 +675,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBTradeTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBTradeTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Favorites" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="392" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="435" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="403" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="403" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="/Volumes/GARMIN/Garmin/History" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="413" />
@@ -688,16 +721,16 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -923,14 +956,6 @@
         <option name="ValidateXdebugSetup" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="ValidateXdebugSetup" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings">
@@ -978,6 +1003,14 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="ValidateXdebugSetup" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -991,24 +1024,6 @@
       </method>
     </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" adl_options="" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" browser_family="FIREFOX" class_name="" debugger_sdk="Module SDK" html_or_swf_file_path="" launcher_type="OSDefault" main_class_name="" method_name="" module_name="" output_log_level="" package_name="" player_path="/Applications/Flash Player.app/Contents/MacOS/Flash Player" port="0" run_mode="HtmlOrSwfFile" run_trusted="false" scope="Class" socket_policy_port="0" url_to_launch="http://">
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1049,6 +1064,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" runner="emma" />
       <option name="MAIN_CLASS_NAME" />
@@ -1067,6 +1100,18 @@
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="FtpUpload" enabled="false">
+          <server_id />
+          <server_name />
+        </option>
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="ValidateXdebugSetup" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1093,18 +1138,6 @@
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="FtpUpload" enabled="false">
-          <server_id />
-          <server_name />
-        </option>
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="ValidateXdebugSetup" enabled="true" />
       </method>
     </configuration>
     <list size="5">
@@ -1143,7 +1176,6 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="11d6784a-2e76-4798-8685-d28ddb74be72" name="Default" comment="" />
-      <changelist id="84912390-66c6-44ca-a479-b95622739a7b" name="ignore" comment="" />
       <created>1272097961123</created>
       <updated>1272097961123</updated>
     </task>
@@ -1176,6 +1208,7 @@
     <layout>
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32973805" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32926333" sideWeight="0.6702619" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4275809" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1184,15 +1217,14 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32742682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20509757" sideWeight="0.30985916" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13477199" sideWeight="0.6702619" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2031759" sideWeight="0.6702619" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18322475" sideWeight="0.6702619" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16245928" sideWeight="0.6702619" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16409862" sideWeight="0.99931556" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32926333" sideWeight="0.6702619" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1212,7 +1244,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added calc ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="ignore" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1237,6 +1269,7 @@
     <MESSAGE value="fixed connection issue" />
     <MESSAGE value="added market data service" />
     <MESSAGE value="added calc ui" />
+    <MESSAGE value="ignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1246,124 +1279,121 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/contract/BarSize.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+        <state line="25" column="35" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/contract/ContractMonth.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/interactivebroker/jtsclient/963/jtsclient-963.jar!/com/ib/client/ContractDetails.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="42" selection-start="639" selection-end="639" vertical-scroll-proportion="0.0">
+        <state line="5" column="13" selection-start="151" selection-end="151" vertical-scroll-proportion="-3.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategySelector.jfd">
-      <provider selected="true" editor-type-id="JFormDesigner">
-        <state propertiesWidth="365" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/contract/ContractPriceComparable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="26" selection-start="3109" selection-end="3109" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategySelector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="8" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.0">
+        <state line="24" column="25" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1298957791000" expanded="true" signature="1416:4910" placeholder="// JFormDesigner - Component initialization - DO NOT MODIFY" />
-            <marker date="1298957791000" expanded="true" signature="5808:6420" placeholder="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyDetails.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/strategy/data/MarketDataStrategyImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="18" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/starillon/ibtradetools/BaseFTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="4" selection-start="365" selection-end="519" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/starillon/ibtradetools/MarketDataFTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="46" selection-start="514" selection-end="523" vertical-scroll-proportion="0.0">
+        <state line="24" column="13" selection-start="830" selection-end="830" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ContractServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0">
+        <state line="22" column="48" selection-start="618" selection-end="629" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/strategy/contract/OptionsDetailsStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/strategy/contract/OptionsDetailsStrategyImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="0" selection-start="2829" selection-end="2829" vertical-scroll-proportion="0.0">
+        <state line="62" column="37" selection-start="2296" selection-end="2296" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/javax/swing/JTabbedPane.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="16" selection-start="3243" selection-end="3243" vertical-scroll-proportion="0.3330116">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTableModelRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategySelector.jfd">
+      <provider selected="true" editor-type-id="JFormDesigner">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTab.jfd">
       <provider selected="true" editor-type-id="JFormDesigner">
-        <state propertiesWidth="504" />
+        <state propertiesWidth="397" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyCalculator.jfd">
-      <provider selected="true" editor-type-id="JFormDesigner">
-        <state propertiesWidth="441" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyCalculator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1249" selection-end="1249" vertical-scroll-proportion="0.0">
+        <state line="43" column="18" selection-start="884" selection-end="884" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategySelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="32" selection-start="2117" selection-end="2117" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1298957791000" expanded="true" signature="1611:2464" placeholder="// JFormDesigner - Component initialization - DO NOT MODIFY" />
-            <marker date="1298957791000" expanded="false" signature="3575:3797" placeholder="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+            <marker date="1299125916000" expanded="true" signature="1725:4960" placeholder="// JFormDesigner - Component initialization - DO NOT MODIFY" />
+            <marker date="1299125916000" expanded="true" signature="6304:6916" placeholder="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTabPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="18" selection-start="2151" selection-end="2151" vertical-scroll-proportion="0.0">
+        <state line="20" column="0" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1298957791000" expanded="true" signature="437:1731" placeholder="// JFormDesigner - Component initialization - DO NOT MODIFY" />
-            <marker date="1298957791000" expanded="true" signature="1743:2006" placeholder="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+            <marker date="1299123899000" expanded="false" signature="437:1631" placeholder="// JFormDesigner - Component initialization - DO NOT MODIFY" />
+            <marker date="1299123899000" expanded="true" signature="1643:1906" placeholder="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="2876" selection-end="2876" vertical-scroll-proportion="0.0">
+        <state line="104" column="29" selection-start="3984" selection-end="3984" vertical-scroll-proportion="0.8404385">
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1298957791000" expanded="true" signature="649:2233" placeholder="// JFormDesigner - Component initialization - DO NOT MODIFY" />
-            <marker date="1298957791000" expanded="false" signature="2346:2643" placeholder="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/starillon/ibtradetools/ui/spreadcalc/SpreadStrategyTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.73081607">
-          <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1299126048000" expanded="false" signature="782:2811" placeholder="// JFormDesigner - Component initialization - DO NOT MODIFY" />
+            <marker date="1299126048000" expanded="true" signature="3034:3421" placeholder="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
           </folding>
         </state>
       </provider>

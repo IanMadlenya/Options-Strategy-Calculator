@@ -33,7 +33,7 @@
        </void> 
        <void method="setProperty"> 
         <string>$rowSpecs</string> 
-        <string>268dlu</string> 
+        <string>271dlu</string> 
        </void> 
       </object> 
       <void property="name"> 

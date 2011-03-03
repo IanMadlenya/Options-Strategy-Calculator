@@ -39,7 +39,7 @@ public class SpreadStrategyTabPanel extends JPanel {
 
         setLayout(new FormLayout(
                 "395dlu",
-                "268dlu"));
+                "271dlu"));
         add(strategyTabPane, cc.xywh(1, 1, 1, 1, CellConstraints.FILL, CellConstraints.FILL));
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
@@ -53,6 +53,7 @@ public class SpreadStrategyTabPanel extends JPanel {
     public void createStrategyTab(SpreadStrategyDetails details) {
         SpreadStrategyTab tab = new SpreadStrategyTab();
         tab.initialise(details);
-        strategyTabPane.addTab(details.getUnderlying(), tab);
+        strategyTabPane.addTab(details.getUnderlying().toUpperCase() + " - " + details.getStrategy().toString(), tab);
+        strategyTabPane.setSelectedComponent(tab);
     }
 }

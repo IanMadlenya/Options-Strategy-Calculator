@@ -10,7 +10,8 @@ public class SpreadStrategyDetails {
     private String underlying;
     private Integer year;
     private String month;
-    private String strikeGap;
+    private Integer strikeGap;
+    private SpreadStrategy strategy;
 
     public void setUnderlying(String underlying) {
         this.underlying = underlying;
@@ -28,7 +29,7 @@ public class SpreadStrategyDetails {
         this.month = month;
     }
 
-    public void setStrikeGap(String strikeGap) {
+    public void setStrikeGap(Integer strikeGap) {
         this.strikeGap = strikeGap;
     }
 
@@ -40,7 +41,15 @@ public class SpreadStrategyDetails {
         return month;
     }
 
-    public String getStrikeGap() {
+    public Integer getStrikeGap() {
         return strikeGap;
+    }
+
+    public void setStrategy(SpreadStrategy strategy) {
+        this.strategy = strategy;
+    }
+
+    public SpreadStrategy getStrategy() {
+        return strategy;
     }
 }

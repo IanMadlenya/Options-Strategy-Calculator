@@ -5,6 +5,9 @@
 package com.starillon.ibtradetools.ui.spreadcalc;
 
 import com.google.common.collect.Lists;
+import com.jgoodies.binding.adapter.ComboBoxAdapter;
+import com.jgoodies.binding.value.ValueHolder;
+import com.jgoodies.binding.value.ValueModel;
 import com.jgoodies.forms.factories.Borders;
 import com.jgoodies.forms.factories.DefaultComponentFactory;
 import com.jgoodies.forms.layout.CellConstraints;
@@ -37,10 +40,13 @@ public class SpreadStrategySelector extends JPanel {
     public SpreadStrategyDetails getSpreadStrategyDetails() {
         SpreadStrategyDetails details = new SpreadStrategyDetails();
 
+        if (strategyList.getSelectedIndex() != -1) {
+            details.setStrategy((SpreadStrategy) strategyList.getSelectedItem());
+        }
         details.setUnderlying(underlyingFld.getText());
         details.setYear((Integer) yearList.getSelectedItem());
         details.setMonth((String) monthList.getSelectedItem());
-        details.setStrikeGap(strikeGapFld.getText());
+        details.setStrikeGap(Integer.parseInt(strikeGapFld.getText()));
 
         return details;
     }
@@ -90,14 +96,6 @@ public class SpreadStrategySelector extends JPanel {
         add(underlyingLbl, cc.xy(2, 1));
         add(underlyingFld, cc.xy(4, 1));
         add(strategyLbl, cc.xy(6, 1));
-
-        //---- strategyList ----
-        strategyList.setModel(new DefaultComboBoxModel(new String[]{
-                "Bear Call Spread",
-                "Bear Put Spread",
-                "Bull Call Spread",
-                "Bull Put Spread\t"
-        }));
         add(strategyList, cc.xy(8, 1));
         add(yearLbl, cc.xy(10, 1));
         add(yearList, cc.xy(12, 1));
@@ -125,6 +123,15 @@ public class SpreadStrategySelector extends JPanel {
             years.add(currentYear + i);
         }
         yearList.setModel(new DefaultComboBoxModel(years.toArray()));
+
+        ValueModel selectionHolder = new ValueHolder("Select Strategy");
+        List<SpreadStrategy> strategies = Lists.newArrayList();
+        strategies.add(SpreadStrategy.BEAR_PUT_SPREAD);
+        strategies.add(SpreadStrategy.BULL_PUT_SPREAD);
+        strategies.add(SpreadStrategy.BEAR_CALL_SPREAD);
+        strategies.add(SpreadStrategy.BULL_CALL_SPREAD);
+
+        strategyList.setModel(new ComboBoxAdapter(strategies, selectionHolder));
     }
 
     private void initForm() {

@@ -7,9 +7,11 @@ import com.ib.client.Contract;
 import com.ib.client.ContractDetails;
 import com.starillon.ibtradetools.connection.ConnectionFactory;
 import com.starillon.ibtradetools.connection.TradeHandlerAdapter;
+import com.starillon.ibtradetools.contract.ContractPriceComparable;
 import com.starillon.ibtradetools.strategy.BaseStrategy;
 import com.starillon.ibtradetools.util.RequestIdGenerator;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -28,6 +30,7 @@ public class OptionsDetailsStrategyImpl extends BaseStrategy implements OptionsD
     private Logger logger;
     private Map<Integer, List<ContractDetails>> resultsMap = Maps.newHashMap();
     private Map<Integer, Boolean> completedRequestsMap = Maps.newHashMap();
+    private ContractPriceComparable contractPriceComparable;
 
     @Inject
     public OptionsDetailsStrategyImpl(RequestIdGenerator requestIdGenerator, ConnectionFactory connectionFactory) {
@@ -54,7 +57,11 @@ public class OptionsDetailsStrategyImpl extends BaseStrategy implements OptionsD
         }
 
         completedRequestsMap.remove(requestId);
-        return resultsMap.remove(requestId);
+
+        List<ContractDetails> optionList = resultsMap.remove(requestId);
+        contractPriceComparable = new ContractPriceComparable();
+        Collections.sort(optionList, contractPriceComparable);
+        return optionList;
     }
 
     private Boolean isComplete(Integer requestId) {
